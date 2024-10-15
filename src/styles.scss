@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+p, a, button {
+  all: unset;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  font-size: min(10vmin, 5rem);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: min(10vmin, 4rem);
+  font-weight: 400;
+}
+
+h3 {
+  font-size: min(5vmin, 1.5rem);
+  font-weight: 400;
+}
