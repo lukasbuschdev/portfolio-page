@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './join.component.html',
-  styleUrl: './join.component.scss'
+  styleUrls: ['./join.component.scss']
 })
 export class JoinComponent {
 

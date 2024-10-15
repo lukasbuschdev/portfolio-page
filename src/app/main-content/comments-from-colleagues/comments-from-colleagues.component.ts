@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { CommentComponent } from './comment/comment.component';
 
 @Component({
   selector: 'app-comments-from-colleagues',
   standalone: true,
-  imports: [],
+  imports: [CommentComponent],
   templateUrl: './comments-from-colleagues.component.html',
-  styleUrl: './comments-from-colleagues.component.scss'
+  styleUrls: ['./comments-from-colleagues.component.scss']
 })
 export class CommentsFromColleaguesComponent {
 

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './pollo-loco.component.html',
-  styleUrl: './pollo-loco.component.scss'
+  styleUrls: ['./pollo-loco.component.scss']
 })
 export class PolloLocoComponent {
 

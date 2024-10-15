@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { JoinComponent } from './join/join.component';
+import { PolloLocoComponent } from './pollo-loco/pollo-loco.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [],
+  imports: [JoinComponent, PolloLocoComponent],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
 
