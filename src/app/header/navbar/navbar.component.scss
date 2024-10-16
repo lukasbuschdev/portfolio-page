@@ -1,0 +1,46 @@
+@import 'variables';
+
+nav {
+    height: 120px;
+    padding: 0 5%;
+    background: transparent;
+
+    img {
+        height: 64px;
+        width: 64px;  
+        filter: brightness(0) invert(1);    
+    }
+
+    a {
+        color: $mainfont;
+        line-height: 27.6px;
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: 'Montserrat';
+        position: relative;
+        text-decoration: none;
+      
+        &:hover {
+          cursor: pointer;
+        }
+      
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: $mainfont;
+          transition: width 0.2s ease-in-out;
+        }
+      
+        &:hover::after {
+          width: 100%;
+        }
+      
+        &:not(:hover)::after {
+          width: 0;
+        }
+    }
+}

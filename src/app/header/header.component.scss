@@ -1,0 +1,82 @@
+@import 'variables';
+
+header {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(234, 240, 255, 1));
+
+    > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        aspect-ratio: 1;
+    }
+
+    #header-container {
+        height: 100%;
+        width: 100%;
+        z-index: 9;
+    }
+
+    #me {
+        width: 55%;
+        height: 100%;
+        position: relative;
+
+        img {
+            width: 100%;
+            aspect-ratio: 1;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    #heading-container {
+        width: 45%;
+        height: 100%;
+        color: $mainfont;
+        padding: 30px 10px 0 10px;
+
+        h2 {
+            font-family: 'Montserrat';
+            font-size: min(10vmin, 2.5rem);
+        }
+    }
+
+    #scroll-icon-container {
+        height: 50%;
+        width: 100%;
+
+        #scroll-container {
+            a {
+                color: $mainfont;
+                font-size: 1rem;
+                font-family: 'Montserrat';
+
+                &:hover {
+                    cursor: pointer;
+                    filter: brightness(0.9);
+                }
+            }
+
+            div {
+                width: 1px;
+                height: 100%;
+                background-color: $mainfont;
+            }
+        }
+
+        #icon-container {
+            img {
+                height: 25px;
+                width: 25px;
+
+                &:hover {
+                    cursor: pointer;
+                    filter: brightness(0.9);
+                }
+            }
+        }
+    }
+}
