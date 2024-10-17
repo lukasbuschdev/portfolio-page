@@ -1,11 +1,80 @@
 @import 'variables';
 
 #description-container {
+    #ball5 {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    #ball6 {
+        position: absolute;
+        right: 24%;
+        top: 40px;
+    }
+
+    position: relative;
+    padding: 100px 5% 80px 5%;
+    height: 550px;
+
     #heading-icon-container {
-        
+        width: 50%;
+        height: 275px;
+
+        #heading-container {
+            h3 {
+                text-align: center;
+            }
+        }
+
+        #icon-container {
+            span {
+                font-family: 'Montserrat';
+                color: $mainfont;
+                font-size: 0.8rem;
+            }
+
+            img {
+                height: 30px;
+                width: 30px;
+                object-fit: contain;
+            }
+        }
     }
 
     #my-description-container {
+        width: 50%;
+        height: 275px;
 
+        span {
+            font-family: 'Montserrat';
+            color: $black;
+            font-size: 1rem;
+        }
+
+        #contact-button-container {
+            width: 100%;
+
+            #contact-button {
+                width: fit-content;
+                font-family: 'Montserrat';
+                color: $mainfont;
+                font-size: 1rem;
+                border: 1px solid $mainfont;
+                border-radius: 10px;
+                padding: 10px 15px;
+                transition: all 125ms ease-in-out;
+                box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
+
+                &:hover {
+                    cursor: pointer;
+                    color: $white;
+                    background-color: $mainfont;
+                    transition: all 125ms ease-in-out;
+                    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
     }
 }
