@@ -1,1 +1,12 @@
-<p>skillset works!</p>
+<div id="skillset-container" class="column">
+    <div id="skilset-heading-container" class="center">
+        <h2>Skill set</h2>
+    </div>
+
+    <div id="skillset" class="row center">
+        <div *ngFor="let skill of skillset" class="column center gap-10 skill">
+            <img [src]="skill.img">
+            <span>{{skill.name}}</span>
+        </div>
+    </div>
+</div>
