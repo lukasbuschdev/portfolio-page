@@ -1,3 +1,5 @@
+@import 'variables';
+
 /* montserrat-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -117,6 +119,7 @@ h1 {
   font-weight: 800;
   font-family: 'Baloo 2';
   line-height: 0.8;
+  color: $mainfont;
 }
 
 h2 {
@@ -124,6 +127,7 @@ h2 {
   font-weight: 400;
   font-family: 'Baloo 2';
   line-height: 1;
+  color: $mainfont
 }
 
 h3 {
@@ -131,4 +135,5 @@ h3 {
   font-weight: 400;
   font-family: 'Baloo 2';
   line-height: 1;
+  color: $mainfont
 }
