@@ -35,7 +35,7 @@ export class SingleProjectComponent {
       github: 'https://github.com/lukasbuschdev/Notes' 
     }, 
     {
-      name: 'DA Buble',
+      name: 'DA Bubble',
       technologies: 'Angular | TypeScript | HTML | SCSS | Firebase',
       description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
       img: './assets/img/dabuble.png',

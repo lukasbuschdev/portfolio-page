@@ -1,0 +1,25 @@
+@import 'variables';
+
+#single-comments-container {
+    gap: 60px;
+
+    .single-comment {
+        width: 25%;
+        max-width: 250px;
+        
+        span {
+            color: $white;
+            font-family: $textfont;
+        }
+        
+        .name {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .project,
+        .text {
+            font-size: 0.9rem;
+        }
+    }
+}
