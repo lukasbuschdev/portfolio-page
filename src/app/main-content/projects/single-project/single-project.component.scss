@@ -1,0 +1,81 @@
+@import 'variables';
+
+#single-project-container {
+    position: relative;
+    z-index: 9;
+    
+    .single-project {
+        width: 100%;
+        height: 300px;
+        align-items: center;
+
+        &:nth-child(2), 
+        &:nth-child(4) {
+            flex-direction: row-reverse;
+            text-align: right;
+
+            .button-container {
+                justify-content: flex-end;
+            }
+        }
+
+        .image-container {
+            width: 40%;
+
+            img {
+                width: 100%;
+                aspect-ratio: 16/9;
+                object-fit: cover;
+                box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        .info-container {
+            width: 40%;
+
+            span:first-of-type {
+                color: $blue;
+                font-size: 1rem;
+                font-family: $textfont;
+            }
+
+            span:last-of-type {
+                color: $black;
+                font-size: 0.9rem;
+                font-family: $textfont;
+            }
+
+            .button-container {
+                div {
+                    width: fit-content;
+                    font-family: $textfont;
+                    color: $blue;
+                    font-size: 1rem;
+                    border: 1px solid $blue;
+                    border-radius: 10px;
+                    padding: 10px 15px;
+                    transition: all 125ms ease-in-out;
+                    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
+    
+                    &:hover {
+                        cursor: pointer;
+                        color: $white;
+                        background-color: $blue;
+                        transition: all 125ms ease-in-out;
+                        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+                    }
+                }
+
+                div:first-of-type {
+                    color: $white;
+                    background-color: $blue;
+
+                    &:hover {
+                        color: $blue;
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

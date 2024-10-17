@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JoinComponent } from './join.component';
+import { SingleProjectComponent } from './single-project.component';
 
-describe('JoinComponent', () => {
-  let component: JoinComponent;
-  let fixture: ComponentFixture<JoinComponent>;
+describe('SingleProjectComponent', () => {
+  let component: SingleProjectComponent;
+  let fixture: ComponentFixture<SingleProjectComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [JoinComponent]
+      imports: [SingleProjectComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(JoinComponent);
+    fixture = TestBed.createComponent(SingleProjectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

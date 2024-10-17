@@ -3,7 +3,7 @@
 /* montserrat-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Montserrat';
+  font-family: $textfont;
   font-style: normal;
   font-weight: 400;
   src: url('./assets/fonts/montserrat-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
@@ -12,7 +12,7 @@
 /* baloo-2-600 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Baloo 2';
+  font-family: $headingfont;
   font-style: normal;
   font-weight: 600;
   src: url('./assets/fonts/baloo-2-v21-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
@@ -20,7 +20,7 @@
 /* baloo-2-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Baloo 2';
+  font-family: $headingfont;
   font-style: normal;
   font-weight: 700;
   src: url('./assets/fonts/baloo-2-v21-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
@@ -28,7 +28,7 @@
 /* baloo-2-800 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Baloo 2';
+  font-family: $headingfont;
   font-style: normal;
   font-weight: 800;
   src: url('./assets/fonts/baloo-2-v21-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
@@ -90,6 +90,10 @@ p, a, button {
   flex-direction: row;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .gap-5 {
   gap: 5px;
 }
@@ -117,23 +121,31 @@ p, a, button {
 h1 {
   font-size: min(10vmin, 5rem);
   font-weight: 800;
-  font-family: 'Baloo 2';
+  font-family: $headingfont;
   line-height: 0.8;
-  color: $mainfont;
+  color: $blue;
 }
 
 h2 {
   font-size: min(10vmin, 4.5rem);
   font-weight: 700;
-  font-family: 'Baloo 2';
+  font-family: $headingfont;
   line-height: 1;
-  color: $mainfont
+  color: $blue
 }
 
 h3 {
   font-size: min(5vmin, 3rem);
   font-weight: 700;
-  font-family: 'Baloo 2';
+  font-family: $headingfont;
   line-height: 1;
-  color: $mainfont
+  color: $blue
+}
+
+h4 {
+  font-size: min(5vmin, 2rem);
+  font-weight: 700;
+  font-family: $headingfont;
+  line-height: 1;
+  color: $blue
 }

@@ -1,0 +1,59 @@
+@import 'variables';
+
+#projects-container {
+    padding: 80px 5%;
+    position: relative;
+    
+    #projects-heading-container {
+        position: relative;
+        z-index: 9;
+
+        h2 {
+            color: $blue;
+        }
+
+        span {
+            color: $black;
+            font-size: 0.9rem;
+            font-family: $textfont;
+            max-width: 400px;
+        }
+    }
+
+    #ball7 {
+        top: 20px;
+        left: 40%;
+    }
+
+    #ball8 {
+        top: 140px;
+        right: 10%;
+    }
+
+    #ball4 {
+        top: 320px;
+        left: 0;
+    }
+
+    #ball10 {
+        top: 54%;
+        left: 9%;
+    }
+
+    #ball9 {
+        height: 400px;
+        top: 36%;
+        right: 0;
+    }
+
+    #ball11 {
+        height: 200px;
+        bottom: 23%;
+        left: 10%;
+    }
+
+    #ball12 {
+        bottom: 10%;
+        right: 5%;
+    } 
+}

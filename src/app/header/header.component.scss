@@ -39,12 +39,12 @@ header {
     #heading-container {
         width: 45%;
         height: 100%;
-        color: $mainfont;
+        color: $blue;
         padding: 30px 10px 0 10px;
 
         span {
-            color: $mainfont;
-            font-family: 'Montserrat';
+            color: $blue;
+            font-family: $textfont;
             font-size: min(10vmin, 2.5rem);
         }
     }
@@ -55,9 +55,9 @@ header {
 
         #scroll-container {
             a {
-                color: $mainfont;
+                color: $blue;
                 font-size: 1rem;
-                font-family: 'Montserrat';
+                font-family: $textfont;
 
                 &:hover {
                     cursor: pointer;
@@ -68,7 +68,7 @@ header {
             div {
                 width: 1px;
                 height: 100%;
-                background-color: $mainfont;
+                background-color: $blue;
             }
         }
 

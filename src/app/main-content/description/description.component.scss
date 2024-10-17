@@ -30,8 +30,8 @@
 
         #icon-container {
             span {
-                font-family: 'Montserrat';
-                color: $mainfont;
+                font-family: $textfont;
+                color: $blue;
                 font-size: 0.8rem;
             }
 
@@ -48,7 +48,7 @@
         height: 275px;
 
         span {
-            font-family: 'Montserrat';
+            font-family: $textfont;
             color: $black;
             font-size: 1rem;
         }
@@ -58,10 +58,10 @@
 
             #contact-button {
                 width: fit-content;
-                font-family: 'Montserrat';
-                color: $mainfont;
+                font-family: $textfont;
+                color: $blue;
                 font-size: 1rem;
-                border: 1px solid $mainfont;
+                border: 1px solid $blue;
                 border-radius: 10px;
                 padding: 10px 15px;
                 transition: all 125ms ease-in-out;
@@ -70,7 +70,7 @@
                 &:hover {
                     cursor: pointer;
                     color: $white;
-                    background-color: $mainfont;
+                    background-color: $blue;
                     transition: all 125ms ease-in-out;
                     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
                 }
