@@ -161,15 +161,9 @@ h3 {
 }
 
 h4 {
-  font-size: min(5vmin, 2rem);
+  font-size: min(5vmin, 1.8rem);
   font-weight: 700;
   font-family: $headingfont;
   line-height: 1;
   color: $blue
 }
-
-// @media (max-width: 850px) {
-//   h1 {
-//       font-size: min(8vmin, 5rem);
-//   }
-// }
