@@ -45,7 +45,7 @@ header {
         span {
             color: $blue;
             font-family: $textfont;
-            font-size: min(10vmin, 2.5rem);
+            font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem);
         }
     }
 

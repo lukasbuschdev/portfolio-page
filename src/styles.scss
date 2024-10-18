@@ -137,7 +137,7 @@ p, a, button {
 }
 
 h1 {
-  font-size: min(10vmin, 5rem);
+  font-size: clamp(3rem, 5vw + 1rem, 6rem);
   font-weight: 800;
   font-family: $headingfont;
   line-height: 0.8;
@@ -167,3 +167,9 @@ h4 {
   line-height: 1;
   color: $blue
 }
+
+// @media (max-width: 850px) {
+//   h1 {
+//       font-size: min(8vmin, 5rem);
+//   }
+// }
