@@ -9,7 +9,12 @@
     padding: 0;
     margin: 0;
     scroll-snap-type: x mandatory;
-    
+    scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
     .single-comment {
         max-width: 220px;
         flex-shrink: 0;

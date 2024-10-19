@@ -21,39 +21,56 @@
     }
 
     #ball7 {
+        height: 8vw;
+        max-height: 100px;
         top: 20px;
         left: 40%;
     }
 
     #ball8 {
-        top: 140px;
+        height: 14vw;
+        max-height: 10%;
+        top: 7%;
         right: 10%;
     }
 
     #ball4 {
-        top: 320px;
+        height: 35vw;
+        max-height: 350px;
+        top: 18%;
         left: 0;
     }
 
-    #ball10 {
-        top: 54%;
-        left: 9%;
-    }
-
     #ball9 {
-        height: 400px;
-        top: 36%;
+        height: 30vw;
+        max-height: 400px;
+        top: 40%;
         right: 0;
     }
 
     #ball11 {
-        height: 200px;
+        height: 18vw;
+        max-height: 200px;
         bottom: 23%;
-        left: 10%;
+        left: 5%;
     }
 
+
     #ball12 {
-        bottom: 10%;
+        height: 8vw;
+        max-height: 100px;
+        bottom: 3%;
         right: 5%;
     } 
+}
+
+@media(max-width: 600px) {
+    #ball8 {
+        top: 5% !important;
+        bottom: 27% !important;
+    }
+
+    #ball11 {
+        bottom: 27% !important;
+    }
 }

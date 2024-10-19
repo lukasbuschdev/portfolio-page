@@ -7,13 +7,19 @@ header {
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
     z-index: 9;
 
-    > img {
-        position: absolute;
+    #ball3 {
         top: 0;
         left: 0;
         width: 50%;
         max-width: 550px;
         aspect-ratio: 1;
+    }
+
+    #menu {
+        display: none;
+        height: 30px;
+        top: 5%;
+        right: 5%;
     }
 
     #header-container {
@@ -87,8 +93,12 @@ header {
 }
 
 @media(max-width: 800px) {
+    #menu {
+        display: block !important;
+    }
+
     header {
-        > img {
+        #ball3 {
             width: 90%;
         }
     }
@@ -123,18 +133,14 @@ header {
 
 @media(max-width: 550px) {
     header {
-        > img {
-            width: 100%;
-        }
+        // #ball3 {
+        //     width: 100%;
+        // }
     }
 
     #heading-container {
         h1 {
-            font-size: clamp(4rem, 5vw + 1rem, 6rem) !important;
+            font-size: min(14vmin, 4rem) !important;
         }
     }
-}
-
-@media(max-width: 450px) {
-
 }
