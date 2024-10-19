@@ -13,7 +13,7 @@ export class CommentComponent {
     {
       name: 'Tarik Uyan',
       project: 'Project Join',
-      text: 'Lukas is a reliable and friendly person. Work in a structured way and write a clear code. I  highly recommend her as a colleague.'
+      text: 'Lukas is a reliable and friendly person. Works in a structured way and writes clean code. I highly recommend him as a colleague.'
     },
     {
       name: 'Evelyn Marx',
@@ -23,7 +23,7 @@ export class CommentComponent {
     {
       name: 'Noah Müller',
       project: 'Project Pollo Loco',
-      text: 'Lukas had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person.'
+      text: 'Lukas had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person.'
     }
   ]
 }

@@ -11,7 +11,6 @@
     }
 
     #text-form-container {
-
         #text-container {
             width: 45%;
 
@@ -28,77 +27,88 @@
                 color: $blue;
             }
         }
+    }
 
-        #form-container {
-            align-items: flex-start;
-            width: 55%;
+    #form-container {
+        align-items: flex-start;
+        width: 55%;
+        max-width: 700px;
+    }
+}
 
-            form {
-                align-items: center;
-                width: 90%;
 
-                input, 
-                textarea {
-                    outline: none;
-                    width: 100%;
-                    font-size: 1.3rem;
-                    font-family: $textfont;
-                    color: $black;
-                    border: 1px solid $blue;
-                    border-radius: 10px;
-                    padding: 9px 18px;
-                    background-color: $white;
-                }
+form {
+    align-items: center;
+    width: 90%;
 
-                #message {
-                    height: 200px;
-                    padding: 12px 18px;
-                    overflow: auto;
-                    resize: none;
-                }
+    input, 
+    textarea {
+        outline: none;
+        width: 100%;
+        font-size: 1.3rem;
+        font-family: $textfont;
+        color: $black;
+        border: 1px solid $blue;
+        border-radius: 10px;
+        padding: 9px 18px;
+        background-color: $white;
+    }
 
-                #button {
-                    width: fit-content;
-                }
+    #message {
+        height: 200px;
+        padding: 12px 18px;
+        overflow: auto;
+        resize: none;
+    }
 
-                span {
-                    color: red;
-                    font-family: $textfont;
-                    font-size: 0.9rem;
-                }
+    #button {
+        width: fit-content;
+        color: $gray;
+        border: 2px solid $gray;
+        background-color: transparent;
+    }
 
-                // prevents background change when using autofill
-                input:-webkit-autofill {
-                    background-color: white !important;
-                    color: inherit !important;
-                    box-shadow: 0 0 0px 1000px white inset !important;
-                    -webkit-text-fill-color: inherit !important;
-                    transition: background-color 5000s ease-in-out 0s;
-                } 
-                
-                // input validation checkbox
+    span {
+        color: red;
+        font-family: $textfont;
+        font-size: 0.9rem;
+        margin-top: -20px;
+    }
 
-                /* Initially, disable the button */
-                input[type="submit"]:disabled {
-                    background-color: grey; /* Optional: style for disabled button */
-                    cursor: not-allowed; /* Show "not-allowed" cursor */
-                }
-  
-                /* Enable the button when the checkbox is checked */
-                input[type="checkbox"]:checked ~ input[type="submit"] {
-                  background-color: blue; /* Style for enabled button */
-                  cursor: pointer;
-                  opacity: 1;
-                }
-
-                /* Optional: Additional styling to differentiate button states */
-                input[type="submit"] {
-                  background-color: grey; /* Initial disabled background */
-                  opacity: 0.6; /* Slightly transparent when disabled */
-                  transition: background-color 0.3s ease, opacity 0.3s ease; /* Smooth transition */
-                }
-  
+    .privacy-agreement-container {
+        width: 100%;
+        align-items: center;
+    
+        input {
+            width: 20px;
+            height: 20px;
+    
+            &:hover {
+                cursor: pointer;
             }
         }
+    
+        span {
+            color: $black;
+            font-size: 0.8rem;
+            margin: unset;
+        }
+    
+        a {
+            color: $blue;
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    
+    // prevents background change when using autofill
+    input:-webkit-autofill {
+        background-color: white !important;
+        color: inherit !important;
+        box-shadow: 0 0 0px 1000px white inset !important;
+        -webkit-text-fill-color: inherit !important;
+        transition: background-color 5000s ease-in-out 0s;
     }
 }

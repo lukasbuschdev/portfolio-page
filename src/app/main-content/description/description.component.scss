@@ -1,6 +1,8 @@
 @import 'variables';
 
 #description-container {
+    gap: 50px;
+    
     #ball5 {
         position: absolute;
         left: 50%;
@@ -25,10 +27,13 @@
         #heading-container {
             h3 {
                 text-align: center;
+                max-width: 500px;
             }
         }
 
         #icon-container {
+            max-width: 500px;
+
             span {
                 font-family: $textfont;
                 color: $blue;

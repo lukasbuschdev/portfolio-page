@@ -15,22 +15,28 @@
         <div id="form-container" class="right">
             <form (ngSubmit)="onSubmit(contactForm)" class="column gap-30" #contactForm="ngForm">
                 <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required>
-                    <span *ngIf="!name.valid && name.touched">Please enter your name!</span>
-
+                <span *ngIf="!name.valid && name.touched">Please enter your name!</span>
+              
                 <input #email="ngModel" [(ngModel)]="contactData.email" type="text" id="mail" name="mail" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                    <span *ngIf="!email.valid && email.touched">Please enter a valid email address!</span>
-                
+                <span *ngIf="!email.valid && email.touched">Please enter a valid email address!</span>
+              
                 <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" id="message" name="message" placeholder="Your message" required></textarea>
-                    <span *ngIf="!message.valid && message.touched">Please enter a message!</span>
-                    <span *ngIf="message.valid && message.value?.length < 8">Message too short!</span>
-
-                <div class="row gap-10">
-                    <input type="checkbox" id="termsCheckbox" name="terms" required>
-                    <span>I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                <span *ngIf="!message.valid && message.touched">Please enter a message!</span>
+                <span *ngIf="message.valid && message.value?.length < 8">Message too short!</span>
+              
+                <div class="row gap-10 privacy-agreement-container left">
+                  <input type="checkbox" id="termsCheckbox" name="terms" [(ngModel)]="termsAccepted" required>
+                  <span>I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</span>
                 </div>
-
-                <input type="submit" id="button" value="Say hello">
-            </form>
+              
+                <input type="submit" id="button" value="Say hello" 
+                    [disabled]="!contactForm.form.valid || !termsAccepted || message.value?.length < 8" 
+                    [ngStyle]="{
+                        'border-color': contactForm.form.valid && termsAccepted && message.value?.length >= 8 ? '#5988ff' : '#bbbbbb',
+                        'color': contactForm.form.valid && termsAccepted && message.value?.length >= 8 ? '#5988ff' : '#bbbbbb',
+                        'cursor': contactForm.form.valid && termsAccepted && message.value?.length >= 8 ? 'pointer' : 'not-allowed'
+                    }">
+            </form>                           
         </div>
     </div>
 </div>

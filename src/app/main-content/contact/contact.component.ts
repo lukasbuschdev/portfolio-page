@@ -19,7 +19,8 @@ export class ContactComponent {
     message: ''
   }
 
-  mailTest = true;
+  termsAccepted: boolean = false;
+  mailTest:boolean = true;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -34,19 +35,22 @@ export class ContactComponent {
 
 
 
-  // ++++++++++++++++++++++++++++++++++++++++++++++++
-  // NEW FUNCTION WITH HTTP AND CORRECT VALIDATION
-  // ++++++++++++++++++++++++++++++++++++++++++++++++
 
   onSubmit(contactForm: NgForm) {
     // First, handle the validation from the first function
-    if(!contactForm.valid || this.contactData.message.length < 8) {
+    if (!contactForm.valid || this.contactData.message.length < 8) {
       contactForm.form.markAllAsTouched(); // Mark all fields as touched so errors are visible
       return; // Prevent form submission if invalid
     }
   
+    // Check if the terms checkbox is accepted
+    if (!this.termsAccepted) {
+      console.log('You must agree to the terms before submitting.');
+      return; // Prevent form submission if the terms are not accepted
+    }
+  
     // Now proceed with the logic from the second function
-    if(contactForm.submitted && contactForm.form.valid && !this.mailTest) {
+    if (contactForm.submitted && contactForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -58,44 +62,40 @@ export class ContactComponent {
           },
           complete: () => console.info('Form submission complete'),
         });
-    } else if(contactForm.submitted && contactForm.form.valid && this.mailTest) {
+    } else if (contactForm.submitted && contactForm.form.valid && this.mailTest) {
       contactForm.resetForm(); // Reset the form for the alternate mailTest condition
     }
-  }
-  
-  
+  }  
 
 
-  // // OLD FUNCTION WITHOUT HTTP
+
+
+  // ++++++++++++++++++++++++++++++++++++++++++++++++
+  // NEW FUNCTION WITH HTTP AND CORRECT VALIDATION
+  // ++++++++++++++++++++++++++++++++++++++++++++++++
+
   // onSubmit(contactForm: NgForm) {
+  //   // First, handle the validation from the first function
   //   if(!contactForm.valid || this.contactData.message.length < 8) {
-  //     contactForm.form.markAllAsTouched();
-  //     return;
+  //     contactForm.form.markAllAsTouched(); // Mark all fields as touched so errors are visible
+  //     return; // Prevent form submission if invalid
   //   }
   
-  //   console.log(this.contactData);
-  // }
-  
-
-
-
-  // // NEW FUNCTION WITH HTTP BUT WITHOUT CORRECT VALIDATION
-  // onSubmit(ngForm: NgForm) {
-  //   if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+  //   // Now proceed with the logic from the second function
+  //   if(contactForm.submitted && contactForm.form.valid && !this.mailTest) {
   //     this.http.post(this.post.endPoint, this.post.body(this.contactData))
   //       .subscribe({
   //         next: (response) => {
-
-  //           ngForm.resetForm();
+  //           console.log("Form submitted successfully", response);
+  //           contactForm.resetForm(); // Reset the form after successful submission
   //         },
   //         error: (error) => {
-  //           console.error(error);
+  //           console.error("Form submission error", error);
   //         },
-  //         complete: () => console.info('send post complete'),
+  //         complete: () => console.info('Form submission complete'),
   //       });
-  //   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-  //     ngForm.resetForm();
+  //   } else if(contactForm.submitted && contactForm.form.valid && this.mailTest) {
+  //     contactForm.resetForm(); // Reset the form for the alternate mailTest condition
   //   }
   // }
 }
