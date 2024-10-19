@@ -3,16 +3,25 @@
 #single-comments-container {
     gap: 60px;
     align-items: flex-start;
-
+    justify-content: center;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    scroll-snap-type: x mandatory;
+    
     .single-comment {
-        width: 25%;
-        max-width: 250px;
-        
+        max-width: 220px;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        padding: 10px;
+        scroll-snap-align: center;
+
         span {
             color: $white;
             font-family: $textfont;
         }
-        
+
         .name {
             font-size: 1.2rem;
             font-weight: 700;
@@ -21,6 +30,26 @@
         .project,
         .text {
             font-size: 0.9rem;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #single-comments-container {
+        justify-content: flex-start;
+
+        .single-comment {
+            min-width: 300px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #single-comments-container {
+        justify-content: flex-start;
+
+        .single-comment {
+            min-width: 250px;
         }
     }
 }

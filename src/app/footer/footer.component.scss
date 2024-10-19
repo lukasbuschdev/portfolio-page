@@ -37,3 +37,12 @@ footer {
         }
     }
 }
+
+@media(max-width: 600px) {
+    footer {
+        height: fit-content;
+        flex-direction: column;
+        gap: 5vh;
+        padding: 5vh 5%;
+    }
+}

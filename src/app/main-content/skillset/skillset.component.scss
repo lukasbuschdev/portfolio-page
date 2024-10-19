@@ -28,3 +28,23 @@
         }
     }
 }
+
+@media(max-width: 800px) {
+    #skillset {
+        gap: 5vw !important;
+
+        img {
+            height: auto;
+            width: 60%;
+            max-width: 105px;
+        }
+    }
+}
+
+@media(max-width: 450px) {
+    #skillset {
+        img {
+            width: 40%;
+        }
+    }
+}

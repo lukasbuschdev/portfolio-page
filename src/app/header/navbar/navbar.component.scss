@@ -44,3 +44,11 @@ nav {
         }
     }
 }
+
+@media(max-width: 800px) {
+  nav {
+    div:last-of-type {
+        display: none;
+    }
+  }
+}

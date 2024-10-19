@@ -22,3 +22,9 @@
         }
     }
 }
+
+@media(max-width: 600px) {
+    #comments-from-colleagues-container {
+        height: fit-content;
+    }
+}

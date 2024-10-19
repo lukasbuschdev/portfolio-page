@@ -14,6 +14,8 @@
         position: absolute;
         right: 24%;
         top: 40px;
+        height: 15vw;
+        max-height: 82px;
     }
 
     position: relative;
@@ -81,5 +83,62 @@
                 }
             }
         }
+    }
+}
+
+@media(max-width: 800px) {
+    #description-container {
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+
+        #heading-icon-container {
+            width: 100%;
+            height: fit-content;
+
+            h3, #icon-container {
+                max-width: none !important;
+            }
+        }
+
+        #icon-container {
+            flex-direction: column;
+            align-items: center;
+
+            div {
+                gap: 15px;
+            }
+
+            br {
+                display: none;
+            }
+        }
+
+        #my-description-container {
+            align-items: center;
+            height: fit-content;
+            width: 100%;
+            gap: 40px;
+            
+            span {
+                font-size: 0.9rem;
+            }
+
+            div:last-of-type {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    #ball5 {
+        height: 150px;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    #ball6 {
+        right: 5% !important;
     }
 }

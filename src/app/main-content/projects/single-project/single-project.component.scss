@@ -80,3 +80,37 @@
         }
     }
 }
+
+@media(max-width: 800px) {
+    #single-project-container {
+        height: fit-content;
+        text-align: center;
+        gap: 15vh;
+        
+        .single-project {
+            flex-direction: column;
+            height: fit-content;
+    
+            &:nth-child(2), 
+            &:nth-child(4) {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .info-container {
+                width: 100%;
+
+                .button-container {
+                    justify-content: center;
+                }
+            }
+
+            .image-container {
+                width: 100%;
+            }
+        }
+    }
+    
+
+
+}
