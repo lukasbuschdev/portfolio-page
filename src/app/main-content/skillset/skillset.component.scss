@@ -42,9 +42,17 @@
 }
 
 @media(max-width: 450px) {
+    #skillset-container {
+        gap: 8vh;
+    }
+
     #skillset {
         img {
             width: 40%;
+        }
+
+        div {
+            width: 90px !important;
         }
     }
 }

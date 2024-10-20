@@ -1,0 +1,161 @@
+@import 'variables';
+
+body {
+    background: #fff;
+    color: #000;
+    font-family: $textfont;
+    font-size: 16px;
+    line-height: 28px;
+    margin: 0
+}
+
+.page {
+    padding: 5vh 5%;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 60px;
+}
+
+h1,h2 {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 48px;
+    margin-top: 1rem;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 36px
+}
+
+h3,h4 {
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 30px
+}
+
+h5 {
+    font-size: 16px
+}
+
+h5,h6 {
+    line-height: 24px;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+h6 {
+    font-size: cacl(16px)
+}
+
+a, span, p, li {
+    font-family: $textfont !important;
+    padding: 1rem 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000
+}
+
+a[rel~=nofollow] {
+    color: $blue
+}
+
+a[rel~=nofollow]:hover {
+    text-decoration: none
+}
+
+.visible {
+    display: block
+}
+
+.hidden {
+    display: none
+}
+
+.page {
+    width: 100%
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    margin-top: 8vh;
+}
+
+.header {
+    color: #000;
+    padding: 16px 0
+}
+
+.header .title {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    margin: 0
+}
+
+.translations-list-container {
+    color: #000;
+    padding-bottom: 8px;
+    margin: 0 0 16px
+}
+
+.translations-list-container .translations-list {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.translations-list-container .translations-list .translations-list-item {
+    display: inline-block;
+    padding: 0;
+    margin: 0 8px 8px 0;
+    color: #fff
+}
+
+.translations-list-container .translations-list .translations-list-item a {
+    display: inline-block;
+    padding: 4px 8px
+}
+
+.translations-list-container .translations-list .translations-list-item a.active {
+    color: #fff;
+    background: #334055
+}
+
+.footer {
+    margin: 32px 0 0;
+    padding: 16px 0
+}
+
+#back {
+    top: 5%;
+    left: 4%;
+    max-height: 30px;
+    height: 20vw;
+    rotate: 90deg;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(0.8);
+    }
+}
+
+@media(max-width: 400px) {
+    a, p, span, li {
+        font-size: 0.8rem;
+    }
+}

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { ScrollService } from '../../scroll.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +13,7 @@ import { ScrollService } from '../../scroll.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  constructor(public scrollService: ScrollService) {}
+  constructor(public scrollService: ScrollService, private router: Router) {}
 
   http = inject(HttpClient);
 
@@ -70,5 +71,9 @@ export class ContactComponent {
         this.showPopup = false;
       }, 2000);
     }, 2000);
+  }
+
+  openPrivacy() {
+    this.router.navigate(['/privacy']);
   }
 }

@@ -12,47 +12,47 @@ export class SkillsetComponent {
   skillset = [
     {
       name: 'Angular',
-      img: './assets/img/angular.png'
+      img: './assets/img/angular.svg'
     },
     {
       name: 'TypeScript',
-      img: './assets/img/ts.png'
+      img: './assets/img/ts.svg'
     },
     {
       name: 'JavaScript',
-      img: './assets/img/js.png'
+      img: './assets/img/js.svg'
     },
     {
       name: 'HTML',
-      img: './assets/img/html.png'
+      img: './assets/img/html.svg'
     },
     {
       name: 'Scrum',
-      img: './assets/img/scrum.png'
+      img: './assets/img/scrum.svg'
     },
     {
       name: 'Firebase',
-      img: './assets/img/firebase.png'
+      img: './assets/img/firebase.svg'
     },
     {
       name: 'GIT',
-      img: './assets/img/git.png'
+      img: './assets/img/git.svg'
     },
     {
       name: 'CSS/SCSS',
-      img: './assets/img/css.png'
+      img: './assets/img/css.svg'
     },
     {
       name: 'Rest-Api',
-      img: './assets/img/api.png'
+      img: './assets/img/api.svg'
     },
     {
       name: 'Material Design',
-      img: './assets/img/materialdesign.png'
+      img: './assets/img/materialdesign.svg'
     },
     {
       name: 'Growth mindset',
-      img: './assets/img/growth.png'
+      img: './assets/img/growth.svg'
     }
   ];
 }
