@@ -1,4 +1,4 @@
-<header class="column">
+<header id="header" class="column">
     <img id="ball3" class="absolute" src="./assets/img/ball3.png">
     <img (click)="openMenu()" id="menu" class="absolute" src="./assets/img/menu.png">
 
@@ -30,8 +30,8 @@
         </div>
     </div>
 
-    <a href="#description-container" id="scroll-down-mobile" class="row center gap-15 absolute">
+    <div (click)="scrollService.scrollToSection('description-container')" id="scroll-down-mobile" class="row center gap-15 absolute">
         <span>Scroll down</span>
         <img src="./assets/img/arrow.png">
-      </a>
+    </div>
 </header>

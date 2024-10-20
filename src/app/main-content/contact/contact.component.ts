@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { ScrollService } from '../../scroll.service';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +12,8 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  constructor(public scrollService: ScrollService) {}
+
   http = inject(HttpClient);
 
   contactData = {

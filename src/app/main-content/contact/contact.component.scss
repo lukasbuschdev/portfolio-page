@@ -134,7 +134,7 @@ form {
         box-shadow: 0 0 0px 1000px white inset !important;
         -webkit-text-fill-color: inherit !important;
         transition: background-color 5000s ease-in-out 0s;
-    }    
+    } 
 }
 
 #popup-container {
@@ -148,23 +148,23 @@ form {
     left: 0;
     opacity: 1;
     transition: opacity 2s ease-in-out;
-  }
+}
   
-  #popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    height: 300px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    border: 2px solid $blue;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding: 20px;
-    z-index: 1000;
-    
+#popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 300px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: 2px solid $blue;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 20px;
+  z-index: 1000;
+  
     span {
       font-size: 1.2rem;
       font-weight: 500;
@@ -172,20 +172,33 @@ form {
       font-family: $textfont;
       line-height: 2rem;
     }
-  }
+}
 
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
   }
+  100% {
+    opacity: 0;
+  }
+}
   
-  .fade-out {
-    animation: fadeOut 2s forwards;
-  }
+.fade-out {
+  animation: fadeOut 2s forwards;
+}
+
+#scroll-up {
+    bottom: 5%;
+    left: 5%;
+    max-height: 45px;
+    height: 10vw;
+    cursor: pointer;
+    z-index: 99;
+
+     &:active {
+        filter: brightness(0.9);
+     }
+}
   
 
 @media(max-width: 800px) {

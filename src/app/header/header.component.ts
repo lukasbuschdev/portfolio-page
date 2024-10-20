@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavbarComponent } from "./navbar/navbar.component";
+import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ import { NavbarComponent } from "./navbar/navbar.component";
   imports: [NavbarComponent]
 })
 export class HeaderComponent {
-  constructor(private router: Router) { }
+  constructor(private router: Router, public scrollService: ScrollService) { }
 
   openMenu() {
     this.router.navigate(['/menu']);

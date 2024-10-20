@@ -4,9 +4,9 @@
     </div>
 
     <div class="center gap-25">
-        <a href="#description-container">About me</a>
-        <a href="#skillset-container">Skill set</a>
-        <a href="#projects-container">My work</a>
-        <a href="#contact-container">Contact</a>
+        <span (click)="scrollService.scrollToSection('description-container')">About me</span>
+        <span (click)="scrollService.scrollToSection('skillset-container')">Skill set</span>
+        <span (click)="scrollService.scrollToSection('projects-container')">My work</span>
+        <span (click)="scrollService.scrollToSection('contact-container')">Contact</span>
     </div>
 </nav>
