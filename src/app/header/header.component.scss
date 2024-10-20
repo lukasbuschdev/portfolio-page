@@ -20,6 +20,11 @@ header {
         height: 30px;
         top: 5%;
         right: 5%;
+
+        &:hover {
+            cursor: pointer;
+            filter: brightness(0.8);
+        }
     }
 
     #header-container {
@@ -85,7 +90,7 @@ header {
 
                 &:hover {
                     cursor: pointer;
-                    filter: brightness(0.9);
+                    filter: brightness(0.8);
                 }
             }
         }
