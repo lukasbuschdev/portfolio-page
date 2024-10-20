@@ -137,15 +137,21 @@ form {
     }    
 }
 
-#popup-background {
-    position: fixed;
+#popup-container {
+    position: absolute;
     height: 100%;
-    width: 100%;
+    width: 100vw;
     background-color: rgba(0, 0, 0, 0.3);
-    filter: blur(0.2);
-}
-
-.popup {
+    backdrop-filter: blur(1px);
+    z-index: 999;
+    top: 0;
+    left: 0;
+    opacity: 1;  /* Initially fully visible */
+    transition: opacity 2s ease-in-out;  /* Smooth fade-out transition */
+  }
+  
+  #popup {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -157,15 +163,32 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     padding: 20px;
-    z-index: 1000;  // Ensures it's above other content
-  
+    z-index: 1000;
+    
     span {
-        font-size: 1.2rem;
-        font-weight: 500;
-        color: $blue;
-        font-family: $textfont;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: $blue;
+      font-family: $textfont;
+      line-height: 2rem;
     }
-}
+  }
+  
+  /* Define the keyframe animation for fading out */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Add the fade-out animation when hiding the popup */
+  .fade-out {
+    animation: fadeOut 2s forwards;  /* 2-second fade-out animation */
+  }
+  
 
 @media(max-width: 800px) {
     #ball11 {

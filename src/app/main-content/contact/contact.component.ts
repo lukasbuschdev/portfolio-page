@@ -34,24 +34,19 @@ export class ContactComponent {
   };
 
   onSubmit(contactForm: NgForm) {
-    // Validate form fields
-    if (!contactForm.valid || this.contactData.message.length < 8) {
-      contactForm.form.markAllAsTouched(); // Mark all fields as touched so errors are visible
+    if(!contactForm.valid || this.contactData.message.length < 8) {
+      contactForm.form.markAllAsTouched();
       return;
     }
 
-    // Ensure terms are accepted
-    if (!this.termsAccepted) {
-      console.error('You must agree to the terms.');
-      return;
-    }
+    if(!this.termsAccepted) return;
 
     // Proceed with sending the email via HTTP POST
     this.http.post(this.post.endPoint, this.post.body(this.contactData))
       .subscribe({
         next: (response) => {
           console.log("Form submitted successfully", response);
-          contactForm.resetForm(); // Reset the form after successful submission
+          contactForm.resetForm();
           this.messageSent();
         },
         error: (error) => {
@@ -65,7 +60,12 @@ export class ContactComponent {
     this.showPopup = true;
 
     setTimeout(() => {
-      this.showPopup = false;
-    }, 5000);
+      const popupElement = document.querySelector('#popup-container');
+      if(popupElement) popupElement.classList.add('fade-out');
+      
+      setTimeout(() => {
+        this.showPopup = false;
+      }, 2000);
+    }, 2000);
   }
 }

@@ -43,10 +43,11 @@
             </form>                           
         </div>
     </div>
-</div>
 
-<div id="popup-background" class="absolute center">
-    <div id="popup" class="popup absolute center" *ngIf="showPopup">
-        <span>Your message has been successfully sent! <br> Thank you for reaching out.</span>
+    <div id="popup-container" *ngIf="showPopup">
+        <div id="popup" class="absolute center gap-15">
+            <span>Your message has been successfully sent! <br> Thank you for reaching out. <br> :)</span>
+        </div>
     </div>
 </div>
+
