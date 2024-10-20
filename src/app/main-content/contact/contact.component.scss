@@ -146,8 +146,8 @@ form {
     z-index: 999;
     top: 0;
     left: 0;
-    opacity: 1;  /* Initially fully visible */
-    transition: opacity 2s ease-in-out;  /* Smooth fade-out transition */
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
   }
   
   #popup {
@@ -173,8 +173,7 @@ form {
       line-height: 2rem;
     }
   }
-  
-  /* Define the keyframe animation for fading out */
+
   @keyframes fadeOut {
     0% {
       opacity: 1;
@@ -184,9 +183,8 @@ form {
     }
   }
   
-  /* Add the fade-out animation when hiding the popup */
   .fade-out {
-    animation: fadeOut 2s forwards;  /* 2-second fade-out animation */
+    animation: fadeOut 2s forwards;
   }
   
 
@@ -226,5 +224,10 @@ form {
         textarea {
             font-size: 1rem;
         }
+    }
+
+    #popup {
+        height: 50vh;
+        width: 90%;
     }
 }
