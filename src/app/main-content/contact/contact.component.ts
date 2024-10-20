@@ -21,6 +21,7 @@ export class ContactComponent {
 
   termsAccepted: boolean = false;
   mailTest:boolean = true;
+  showPopup: boolean = false;
 
   post = {
     endPoint: 'https://lukasbusch.dev/sendMail.php',
@@ -51,11 +52,20 @@ export class ContactComponent {
         next: (response) => {
           console.log("Form submitted successfully", response);
           contactForm.resetForm(); // Reset the form after successful submission
+          this.messageSent();
         },
         error: (error) => {
           console.error("Form submission error", error);
         },
         complete: () => console.info('Form submission complete'),
       });
+  }
+
+  messageSent() {
+    this.showPopup = true;
+
+    setTimeout(() => {
+      this.showPopup = false;
+    }, 5000);
   }
 }
