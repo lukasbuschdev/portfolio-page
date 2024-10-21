@@ -1,4 +1,4 @@
-<div id="menu-container">
+<div [ngClass]="{'dark-mode': checkDarkMode()}" id="menu-container">
     <img id="logo" class="absolute" src="./assets/img/logo_blue.svg">
     <img (click)="closeMenu()" id="menu" class="absolute" src="./assets/img/menu.svg">
 
@@ -7,5 +7,9 @@
         <a (click)="closeMenu()" href="#skillset-container">Skill set</a>
         <a (click)="closeMenu()" href="#projects-container">My work</a>
         <a (click)="closeMenu()" href="#contact-container">Contact</a>
+        <span (click)="toggleDarkMode()">
+            <ng-container *ngIf="checkDarkMode(); else lightMode">Light</ng-container>
+            <ng-template #lightMode>Dark</ng-template>
+        </span>
     </nav>
 </div>

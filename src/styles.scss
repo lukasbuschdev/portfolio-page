@@ -214,3 +214,42 @@ input[type="number"] {
 input[type="number"] {
     -ms-appearance: none !important;
 }
+
+
+// Dark Mode
+
+.dark-mode {
+  background: none !important;
+  background-color: $darkmode !important;
+  transition: background-color 200ms ease-in-out;
+}
+
+.dark-mode-text {
+  color: $white !important;
+  transition: color 200ms ease-in-out;
+}
+
+.dark-mode-text-dark {
+  color: $darkmode !important;
+  transition: color 200ms ease-in-out;
+}
+
+.dark-mode-img {
+  filter: brightness(0.75) !important;
+  transition: filter 200ms ease-in-out;
+}
+
+.dark-mode-btn:hover {
+  background-color: $darkmode !important;
+  transition: background-color 200ms ease-in-out;
+}
+
+.dark-mode-privacy-legal {
+  background-color: $darkmode;
+  transition: background-color 200ms ease-in-out;
+
+  p, span, a, li {
+    color: $white;
+    transition: color 200ms ease-in-out;
+  }
+}

@@ -8,5 +8,9 @@
         <span (click)="scrollService.scrollToSection('skillset-container')">Skill set</span>
         <span (click)="scrollService.scrollToSection('projects-container')">My work</span>
         <span (click)="scrollService.scrollToSection('contact-container')">Contact</span>
+        <span (click)="toggleDarkMode()">
+            <ng-container *ngIf="checkDarkMode(); else lightMode">Light</ng-container>
+            <ng-template #lightMode>Dark</ng-template>
+        </span>
     </div>
 </nav>

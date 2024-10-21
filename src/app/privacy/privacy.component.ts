@@ -1,19 +1,24 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedService } from '../shared.service';
-import { NgIf } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
+import { ThemeService } from '../theme.service';
 
 @Component({
   selector: 'app-privacy',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, CommonModule],
   templateUrl: './privacy.component.html',
   styleUrls: ['./privacy.component.scss']
 })
 export class PrivacyComponent {
   isScrollButtonVisible = false;
 
-  constructor(private router: Router, public sharedService: SharedService) {}
+  constructor(private router: Router, public sharedService: SharedService, private themeService: ThemeService) {}
+
+  checkDarkMode() {
+    return this.themeService.getDarkModeStatus();
+  }
 
   ngOnInit() {
     this.checkScroll();

@@ -1,10 +1,10 @@
 @import 'variables';
 
 .legal-notice-container {
-    padding: 6vh 4rem;
+    padding: 12vh 4rem;
     width: 100%;
     gap: 80px;
-    margin-top: 6vh;
+    height: 100vh;
 }
 
 .legal-notice-segments {
@@ -58,7 +58,7 @@ a {
 
 @media(max-width: 550px) {
     .legal-notice-container {
-        padding: 4vh 2rem;
+        padding: 12vh 2rem;
         align-items: flex-start;
     }
 

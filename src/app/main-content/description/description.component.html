@@ -1,4 +1,4 @@
-<div id="description-container" class="center">
+<div id="description-container" [ngClass]="{'dark-mode': checkDarkMode()}" class="center">
     <img id="ball5" src="./assets/img/ball5.svg">
     <img id="ball6" src="./assets/img/ball6.svg">
 
@@ -27,7 +27,7 @@
         
         <div id="my-description-container" class="column between">
             <div id="my-description">
-                <span>
+                <span [ngClass]="{'dark-mode-text': checkDarkMode()}">
                     I am a Front-end developer based in Mérida, Mexico. 
                     I enjoy helping designers and companies bring their ideas into real life.
                     I am looking forward to continuing my developer career with a job in a junior web developer position. 

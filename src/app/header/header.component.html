@@ -1,4 +1,4 @@
-<header id="header" class="column">
+<header id="header" class="column" [ngClass]="{'dark-mode': checkDarkMode()}">
     <img id="ball3" class="absolute" src="./assets/img/ball3.svg">
     <img (click)="openMenu()" id="menu" class="absolute" src="./assets/img/menu.svg">
 

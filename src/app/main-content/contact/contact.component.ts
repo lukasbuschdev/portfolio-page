@@ -4,6 +4,7 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { ScrollService } from '../../scroll.service';
 import { Router } from '@angular/router';
+import { ThemeService } from '../../theme.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,7 +14,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  constructor(public scrollService: ScrollService, private router: Router) {}
+  constructor(public scrollService: ScrollService, private router: Router, private themeService: ThemeService) {}
+
+  checkDarkMode() {
+    return this.themeService.getDarkModeStatus();
+  }
 
   http = inject(HttpClient);
 

@@ -92,6 +92,25 @@ form {
         background-color: transparent;
     }
 
+    .valid-button {
+        border-color: $blue !important;
+        color: $blue !important;
+        cursor: pointer;
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            color: $white !important;
+            background-color: $blue !important;
+            transition: all 125ms ease-in-out;
+        }
+    }
+    
+    .invalid-button {
+        border-color: #bbbbbb;
+        color: #bbbbbb;
+        cursor: not-allowed;
+    }
+  
     span {
         color: red;
         font-family: $textfont;

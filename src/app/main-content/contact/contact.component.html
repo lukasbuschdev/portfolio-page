@@ -1,4 +1,4 @@
-<div id="contact-container" class="column gap-30">
+<div id="contact-container" class="column gap-30" [ngClass]="{'dark-mode': checkDarkMode()}">
     <img id="ball13" class="absolute" src="./assets/img/ball13.svg">
     <img id="ball11" class="absolute" src="./assets/img/ball11.svg">
     <img id="ball14" class="absolute" src="./assets/img/ball14.svg">
@@ -11,7 +11,7 @@
         <div id="text-container" class="column gap-25">
             <h4>Got a problem to solve?</h4>
             <div class="column gap-15">
-                <span>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</span>
+                <span [ngClass]="{'dark-mode-text': checkDarkMode()}">Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</span>
                 <span>Need a Frontend developer? <b>Contact me!</b></span>
             </div>
         </div>
@@ -30,23 +30,23 @@
               
                 <div class="row gap-10 privacy-agreement-container left">
                   <input type="checkbox" id="termsCheckbox" name="terms" [(ngModel)]="termsAccepted" required>
-                  <span>I've read the <a (click)="openPrivacy()">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                  <span [ngClass]="{'dark-mode-text': checkDarkMode()}">I've read the <a (click)="openPrivacy()">privacy policy</a> and agree to the processing of my data as outlined.</span>
                 </div>
               
-                <input type="submit" id="button" value="Say hello" 
+                <input type="submit" id="button" value="Say hello"
                     [disabled]="!contactForm.form.valid || !termsAccepted || message.value?.length < 8" 
-                    [ngStyle]="{
-                        'border-color': contactForm.form.valid && termsAccepted && message.value?.length >= 8 ? '#5988ff' : '#bbbbbb',
-                        'color': contactForm.form.valid && termsAccepted && message.value?.length >= 8 ? '#5988ff' : '#bbbbbb',
-                        'cursor': contactForm.form.valid && termsAccepted && message.value?.length >= 8 ? 'pointer' : 'not-allowed'
+                    [ngClass]="{
+                      'valid-button': contactForm.form.valid && termsAccepted && message.value?.length >= 8,
+                      'invalid-button': !contactForm.form.valid || !termsAccepted || message.value?.length < 8
                     }">
+
             </form>                           
         </div>
     </div>
 
     <div id="popup-container" *ngIf="showPopup">
-        <div id="popup" class="absolute center gap-15">
-            <span>Your message has been successfully sent! <br> Thank you for reaching out. <br> :)</span>
+        <div id="popup" class="absolute center gap-15" [ngClass]="{'dark-mode': checkDarkMode()}">
+            <span [ngClass]="{'dark-mode-text': checkDarkMode()}">Your message has been successfully sent! <br> Thank you for reaching out. <br> :)</span>
         </div>
     </div>
 

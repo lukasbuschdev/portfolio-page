@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ThemeService } from '../../../theme.service';
 
 @Component({
   selector: 'app-single-project',
@@ -9,6 +10,12 @@ import { Component } from '@angular/core';
   styleUrl: './single-project.component.scss'
 })
 export class SingleProjectComponent {
+  constructor(private themeService: ThemeService) {}
+
+  checkDarkMode() {
+    return this.themeService.getDarkModeStatus();
+  }
+
   projects = [
     {
       name: 'Join',

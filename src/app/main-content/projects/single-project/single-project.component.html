@@ -7,9 +7,9 @@
         <div class="column info-container gap-15">
             <h4>{{project.name}}</h4>
             <span>{{project.technologies}}</span>
-            <span>{{project.description}}</span>
+            <span [ngClass]="{'dark-mode-text': checkDarkMode()}">{{project.description}}</span>
             <div class="row button-container gap-30">
-                <a [href]="project.link" target="_blank">Live Test</a>
+                <a [ngClass]="{'dark-mode-btn': checkDarkMode()}" [href]="project.link" target="_blank">Live Test</a>
                 <a [href]="project.github" target="_blank">Github</a>
             </div>
         </div>
