@@ -182,7 +182,7 @@
     <p>By email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3f5d4a4c5c57534a545e4c0e080a7f58525e5653115c5052">[email&#160;protected]</a></p>
     </li>
     <li>
-    <p>By visiting this page on our website: <a href="https://lukasbusch.dev/#contact-container" rel="external nofollow noopener" target="_blank">https://lukasbusch.dev/#contact-container</a></p>
+    <p>By visiting this page on our website: <a  (click)="sharedService.openContact()" rel="external nofollow noopener" target="_blank">https://lukasbusch.dev/#contact-container</a></p>
     </li>
     </ul>
     </div>
@@ -193,5 +193,8 @@
     <div class="container">
     <p>Generated using <a href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank">TermsFeed Privacy Policy Generator</a></p>
     </div>
+    </div>
+    <div id="scroll-up" class="center" (click)="scrollUp()">
+        <img id="scroll-arrow" src="./assets/img/arrow_white.svg">
     </div>
     </div>

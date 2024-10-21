@@ -8,11 +8,13 @@ export class ScrollService {
   constructor() { }
 
   scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if(element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    window.history.pushState(null, '', `#${sectionId}`);
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if(element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+  
+      window.history.pushState(null, '', `#${sectionId}`);
+    }, 100);
   }
 }

@@ -143,7 +143,7 @@ a[rel~=nofollow]:hover {
 
 #back {
     top: 5%;
-    left: 4%;
+    left: 3%;
     max-height: 30px;
     height: 20vw;
     rotate: 90deg;
@@ -151,6 +151,29 @@ a[rel~=nofollow]:hover {
 
     &:hover {
         filter: brightness(0.8);
+    }
+}
+
+#scroll-up {
+    position: fixed;
+    bottom: 4%;
+    left: 3%;
+    max-height: 45px;
+    height: 14vw;
+    aspect-ratio: 1;
+    cursor: pointer;
+    z-index: 99;
+    background-image: url('/assets/img/ball14.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &:active {
+        filter: brightness(0.9);
+    }
+    
+    #scroll-arrow {
+        rotate: 180deg;
+        fill: $white;
     }
 }
 

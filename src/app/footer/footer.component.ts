@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ScrollService } from '../scroll.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -9,5 +10,9 @@ import { ScrollService } from '../scroll.service';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  constructor(public scrollService: ScrollService) {}
+  constructor(public scrollService: ScrollService, private router: Router) {}
+
+  openLegalNotice() {
+    this.router.navigate(['/legal']);
+  }
 }

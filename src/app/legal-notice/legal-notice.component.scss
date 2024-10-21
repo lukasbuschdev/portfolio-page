@@ -1,0 +1,78 @@
+@import 'variables';
+
+.legal-notice-container {
+    padding: 6vh 4rem;
+    width: 100%;
+    gap: 80px;
+    margin-top: 6vh;
+}
+
+.legal-notice-segments {
+    height: 50vh;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: min(14vmin, 4rem);
+}
+
+h3 {
+    font-size: min(9vmin, 2rem);
+}
+
+a, span {
+    font-family: $textfont;
+}
+
+a {
+    color: $blue;
+
+    &:hover {
+        cursor: pointer;
+        filter: brightness(0.8);
+    }
+}
+
+#back {
+    top: 5%;
+    left: 4%;
+    max-height: 30px;
+    height: 20vw;
+    rotate: 90deg;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(0.8);
+    }
+}
+
+@media(max-width: 800px) {
+    .legal-notice-container {
+        gap: 20px;
+    }
+
+    .legal-notice-container h3 {
+        font-weight: 600 !important;
+    }
+}
+
+@media(max-width: 550px) {
+    .legal-notice-container {
+        padding: 4vh 2rem;
+        align-items: flex-start;
+    }
+
+    #back {
+        top: 3%;
+    }
+}
+
+@media(max-width: 400px) {
+    .legal-notice-container {
+        padding: 4vh 1rem;
+    }
+
+    a, span {
+        font-size: 0.8rem;
+    }
+}

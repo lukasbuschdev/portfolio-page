@@ -26,14 +26,11 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.events.subscribe(event => {
+      
       if(event instanceof NavigationEnd) {
-        this.isFooterVisible = event.url !== '/menu';
-        window.scrollTo(0, 0);
-      }
-
-      if(event instanceof NavigationEnd) {
-        this.isFooterVisible = event.url !== '/privacy';
-        this.isHeaderVisible = event.url !== '/privacy';
+        const url = event.url;
+        this.isFooterVisible = url !== '/menu' && url !== '/privacy' && url !== '/legal';
+        this.isHeaderVisible = url !== '/menu' && url !== '/privacy' && url !== '/legal';
         window.scrollTo(0, 0);
       }
     });

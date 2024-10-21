@@ -15,7 +15,7 @@
         }
 
         span {
-            font-size: 1.5rem;
+            font-size: min(5vmin, 1.5rem);
             font-family: $textfont;
             font-weight: 400;
             color: $white;

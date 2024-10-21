@@ -17,13 +17,13 @@
 
             <div id="scroll-icon-container" class="row around">
                 <div id="scroll-container" class="column center">
-                    <a href="#description-container">SCROLL</a>
+                    <a (click)="scrollService.scrollToSection('description-container')">SCROLL</a>
                     <div></div>
                 </div>
 
                 <div id="icon-container" class="column center gap-25">
                     <a href="https://github.com/lukasbuschdev" target="_blank"><img src="./assets/img/github.svg"></a>
-                    <a href="#contact-container"><img src="./assets/img/contact.svg"></a>
+                    <a (click)="scrollService.scrollToSection('contact-container')"><img src="./assets/img/contact.svg"></a>
                     <a href="https://mx.linkedin.com/in/lukas-busch-4192001b5?trk=people-guest_people_search-card" target="_blank"><img src="./assets/img/linkedin.svg"></a>
                 </div>
             </div>
