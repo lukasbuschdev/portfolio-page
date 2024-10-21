@@ -1,6 +1,17 @@
 <div [ngClass]="{'dark-mode': checkDarkMode()}" id="menu-container">
-    <img id="logo" class="absolute" src="./assets/img/logo_blue.svg">
-    <img (click)="closeMenu()" id="menu" class="absolute" src="./assets/img/menu.svg">
+    <div class="header-container between">
+        <img id="logo" src="./assets/img/logo_blue.svg">
+        <div class="between menu-lang-container">
+            <div id="language-container" class="row gap-15">
+                <span class="lang-btn">EN</span>
+                <span>|</span>
+                <span class="lang-btn">ES</span>
+                <span>|</span>
+                <span class="lang-btn">DE</span>
+            </div>
+            <img (click)="closeMenu()" id="menu" src="./assets/img/menu.svg">
+        </div>
+    </div>
 
     <nav class="center column">
         <a (click)="closeMenu()" href="#description-container">About me</a>

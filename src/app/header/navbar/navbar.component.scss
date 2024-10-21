@@ -1,54 +1,81 @@
 @import 'variables';
 
 nav {
-    height: 120px;
-    padding: 0 5%;
-    background: transparent;
+  height: 20vh;
+  padding: 4% 5%;
+  background: transparent;
+  align-items: center;
 
-    img {
-        height: 64px;
-        width: 64px;  
-        filter: brightness(0) invert(1);    
+  #menu {
+    display: none;
+    height: 30px;
+    width: 30px;
+
+    &:hover {
+        cursor: pointer;
+        filter: brightness(0.8);
     }
-
+  }
+  
+  img {
+    height: 64px;
+    width: 64px;  
+    filter: brightness(0) invert(1);    
+  }
+  
+  span {
+    color: $blue;
+    line-height: 27.6px;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: $textfont;
+    position: relative;
+    text-decoration: none;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: $blue;
+      transition: width 0.2s ease-in-out;
+    }
+    
+    &:hover::after {
+      width: 100%;
+    }
+  
+    &:not(:hover)::after {
+      width: 0;
+    }
+  }
+  
+  #language-container {
+    top: 2vh;
+    right: 5%;
+  
     span {
-        color: $blue;
-        line-height: 27.6px;
-        font-size: 1rem;
-        font-weight: 400;
-        font-family: $textfont;
-        position: relative;
-        text-decoration: none;
-      
-        &:hover {
-          cursor: pointer;
-        }
-      
-        &::after {
-          content: '';
-          position: absolute;
-          width: 0;
-          height: 2px;
-          bottom: 0;
-          left: 0;
-          background-color: $blue;
-          transition: width 0.2s ease-in-out;
-        }
-      
-        &:hover::after {
-          width: 100%;
-        }
-      
-        &:not(:hover)::after {
-          width: 0;
-        }
+      font-size: 0.8rem;
     }
+  }
 }
+
 
 @media(max-width: 800px) {
   nav {
-    div:last-of-type {
-        display: none;
+    div:last-of-type,
+    #language-container {
+      display: none;
+    }
+
+    #menu {
+      display: block !important;
     }
   }
 }

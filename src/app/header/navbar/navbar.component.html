@@ -3,7 +3,15 @@
         <img src="./assets/img/logo.svg">
     </div>
 
-    <div class="center gap-25">
+    <div id="language-container" class="row absolute gap-15">
+        <span>EN</span>
+        <span>|</span>
+        <span>ES</span>
+        <span>|</span>
+        <span>DE</span>
+    </div>
+
+    <div class="center gap-20">
         <span (click)="scrollService.scrollToSection('description-container')">About me</span>
         <span (click)="scrollService.scrollToSection('skillset-container')">Skill set</span>
         <span (click)="scrollService.scrollToSection('projects-container')">My work</span>
@@ -13,4 +21,6 @@
             <ng-template #lightMode>Dark</ng-template>
         </span>
     </div>
+
+    <img (click)="openMenu()" id="menu" src="./assets/img/menu.svg">
 </nav>

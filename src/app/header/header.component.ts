@@ -19,10 +19,6 @@ export class HeaderComponent {
     this.checkDarkMode();
   }
 
-  openMenu() {
-    this.router.navigate(['/menu']);
-  }
-
   checkDarkMode() {
     return this.themeService.getDarkModeStatus();
   }

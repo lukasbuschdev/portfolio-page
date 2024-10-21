@@ -219,7 +219,7 @@ input[type="number"] {
 // Dark Mode
 
 .dark-mode {
-  background: none !important;
+  background-image: none !important;
   background-color: $darkmode !important;
   transition: background-color 200ms ease-in-out;
 }
