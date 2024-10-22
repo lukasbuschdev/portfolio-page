@@ -58,20 +58,12 @@ a {
 
 @media(max-width: 550px) {
     .legal-notice-container {
-        padding: 12vh 2rem;
         align-items: flex-start;
-    }
-
-    #back {
-        top: 3%;
+        padding: 12vh 2rem;
     }
 }
 
 @media(max-width: 400px) {
-    .legal-notice-container {
-        padding: 4vh 1rem;
-    }
-
     a, span {
         font-size: 0.8rem;
     }

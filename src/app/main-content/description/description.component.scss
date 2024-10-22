@@ -96,6 +96,7 @@
 @media(max-width: 800px) {
     #description-container {
         height: fit-content;
+        min-height: 100vh;
         
         #heading-description-container {
             height: fit-content;

@@ -30,6 +30,10 @@
 }
 
 @media(max-width: 800px) {
+    #skillset-container {
+        min-height: 100vh;
+    }
+
     #skillset {
         gap: 5vw !important;
 

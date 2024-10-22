@@ -85,6 +85,8 @@ nav {
 
 @media(max-width: 800px) {
   nav {
+    height: 15vh;
+
     div:last-of-type,
     #language-container {
       display: none;
