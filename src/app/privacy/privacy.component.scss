@@ -65,7 +65,7 @@ a, span, p, li {
 a {
     text-decoration: none;
     cursor: pointer;
-    color: $blue;
+    color: $blue !important;
     padding: 0;
 }
 
