@@ -2,25 +2,41 @@
     <div class="center">
         <img src="./assets/img/logo.svg">
     </div>
-
+  
     <div id="language-container" class="row absolute gap-15">
-        <span>EN</span>
+        <span 
+          class="lang-btn" 
+          [class.active]="currentLanguage === 'en'" 
+          (click)="changeLanguage('en')">
+          EN
+        </span>
         <span>|</span>
-        <span>ES</span>
+        <span 
+          class="lang-btn" 
+          [class.active]="currentLanguage === 'es'" 
+          (click)="changeLanguage('es')">
+          ES
+        </span>
         <span>|</span>
-        <span>DE</span>
+        <span 
+          class="lang-btn" 
+          [class.active]="currentLanguage === 'de'" 
+          (click)="changeLanguage('de')">
+          DE
+        </span>
     </div>
-
-    <div class="center gap-20">
-        <span (click)="scrollService.scrollToSection('description-container')">About me</span>
-        <span (click)="scrollService.scrollToSection('skillset-container')">Skill set</span>
-        <span (click)="scrollService.scrollToSection('projects-container')">My work</span>
-        <span (click)="scrollService.scrollToSection('contact-container')">Contact</span>
+  
+    <div class="links-container center gap-20">
+        <span (click)="scrollService.scrollToSection('description-container')">{{ getTranslation('ABOUT_ME') }}</span>
+        <span (click)="scrollService.scrollToSection('skillset-container')">{{ getTranslation('SKILL_SET') }}</span>
+        <span (click)="scrollService.scrollToSection('projects-container')">{{ getTranslation('MY_WORK') }}</span>
+        <span (click)="scrollService.scrollToSection('contact-container')">{{ getTranslation('CONTACT') }}</span>
         <span (click)="toggleDarkMode()">
             <ng-container *ngIf="checkDarkMode(); else lightMode">Light</ng-container>
             <ng-template #lightMode>Dark</ng-template>
         </span>
     </div>
-
-    <img (click)="openMenu()" id="menu" src="./assets/img/menu.svg">
+  
+    <img (click)="openMenu()" id="menu" src="./assets/img/menu.svg"
+        [ngStyle]="{'filter': checkDarkMode() ? 'brightness(0) invert(1)' : 'brightness(1) invert(0)'}">
 </nav>

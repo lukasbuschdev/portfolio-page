@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ScrollService } from '../scroll.service';
 import { Router } from '@angular/router';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-footer',
@@ -10,7 +11,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  constructor(public scrollService: ScrollService, private router: Router) {}
+  currentLanguage: string = 'en';
+
+  constructor(public scrollService: ScrollService, private router: Router, private languageService: LanguageService) {}
+
+  ngOnInit() {
+    this.languageService.getCurrentLanguage().subscribe(lang => {
+      this.currentLanguage = lang;
+    });
+  }
+
+  getTranslation(key: string): string {
+    return this.languageService.getTranslation(key);
+  }
 
   openLegalNotice() {
     this.router.navigate(['/legal']);

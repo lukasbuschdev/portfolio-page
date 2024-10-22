@@ -1,9 +1,9 @@
 <div id="single-comments-container" class="row center">
     <div *ngFor="let comment of comments" class="column single-comment gap-30">
         <div class="column heading-project-container gap-5">
-            <span class="name">{{comment.name}}</span>
-            <span class="project">{{comment.project}}</span>
+            <span class="name">{{ comment.name }}</span>
+            <span class="project">{{ getProject(comment) }}</span>
         </div>
-        <span class="text">{{comment.text}}</span>
+        <span class="text">{{ getText(comment) }}</span>
     </div>
 </div>

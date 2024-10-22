@@ -65,6 +65,19 @@
         
         }
 
+        .lang-btn {
+            cursor: pointer;
+          
+            &.active {
+              font-weight: bold;
+            }
+          
+            &:hover {
+              cursor: pointer;
+              filter: brightness(0.8);
+            }
+          }
+          
         .lang-btn:hover {
             cursor: pointer;
             filter: brightness(0.8);

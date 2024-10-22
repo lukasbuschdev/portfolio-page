@@ -217,9 +217,13 @@ form {
     background-image: url('/assets/img/ball14.svg');
     background-size: contain;
     background-repeat: no-repeat;
+    
+    &:hover {
+        filter: brightness(0.9);
+    }
 
     &:active {
-        filter: brightness(0.9);
+        filter: brightness(0.8);
     }
     
     #scroll-arrow {

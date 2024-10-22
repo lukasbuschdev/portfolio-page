@@ -4,27 +4,30 @@
     <h2 data-lang="legal-notice-heading">Legal notice</h2>
     <div class="column gap-30 legal-notice-segments">
         <div class="column gap-20">
-            <h3 data-lang="legal-notice-heading-2">Information according to § 5 TMG</h3>
+            <h3 data-lang="legal-notice-heading-2">{{ getTranslation('LEGAL_NOTICE_HEADING') }}</h3>
             <div class="column gap-10">
                 <span>Lukas Busch</span>
                 <span>Calle 41 595 2 por 84A y 84B</span>
-                <span>97000 Mérida</span>
-                <span data-lang="mexico">Mexico</span>
+                <span>97000 {{ getTranslation('LEGAL_NOTICE_CITY') }}</span>
+                <span data-lang="mexico">{{ getTranslation('LEGAL_NOTICE_COUNTRY') }}</span>
             </div>
         </div>
     
         <div class="column gap-20">
-            <h3 data-lang="legal-notice-heading-3">Contact</h3>
+            <h3 data-lang="legal-notice-heading-3">{{ getTranslation('LEGAL_NOTICE_CONTACT') }}</h3>
             <div class="column gap-10">
                 <div class="row gap-10">
-                    <span data-lang="phone">Phone:</span><a href="tel:+436643126109">+52 999 351 80 61</a>
+                    <span data-lang="phone">{{ getTranslation('LEGAL_NOTICE_PHONE') }}</span><a href="tel:+529993518061">+52 999 351 80 61</a>
                 </div>
-                <span>E-Mail: <a (click)="sharedService.openContact()">buschlukas175&#64;gmail.com</a></span>
+                <span>
+                    {{ getTranslation('LEGAL_NOTICE_MAIL') }}
+                    <a (click)="sharedService.openContact()">buschlukas175&#64;gmail.com</a>
+                </span>
             </div>
         </div>
 
         <div class="row gap-10">
-            <span data-lang="legal-notice-source">Source:</span>
+            <span data-lang="legal-notice-source">{{ getTranslation('LEGAL_NOTICE_SOURCE') }}</span>
             <a href="https://www.e-recht24.de">eRecht24</a>
         </div>
     </div>

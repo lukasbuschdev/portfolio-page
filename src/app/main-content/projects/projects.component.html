@@ -7,8 +7,8 @@
     <img id="ball12" src="./assets/img/ball12.svg" class="absolute">
 
     <div id="projects-heading-container" class="column gap-20">
-        <h2>My work</h2>
-        <span [ngClass]="{'dark-mode-text': checkDarkMode()}">Explore a selection of my work here - Interact with projects to see my skills in action.</span>
+        <h2>{{ getTranslation('PROJECTS_HEADING') }}</h2>
+        <span [ngClass]="{'dark-mode-text': checkDarkMode()}">{{ getTranslation('PROJECTS_TEXT') }}</span>
     </div>
 
     <app-single-project></app-single-project>

@@ -10,13 +10,13 @@
 
         <div id="heading-container" class="column between">
             <div class="column gap-15">
-                <span>Hello! I am Lukas</span>
+                <span>{{ getTranslation('HELLO')}}</span>
                 <h1>FRONTEND <br>DEVELOPER</h1>
             </div>
 
             <div id="scroll-icon-container" class="row around">
                 <div id="scroll-container" class="column center">
-                    <a (click)="scrollService.scrollToSection('description-container')">SCROLL</a>
+                    <a (click)="scrollService.scrollToSection('description-container')">{{ getTranslation('SCROLL_CAPITAL') }}</a>
                     <div></div>
                 </div>
 
@@ -30,7 +30,7 @@
     </div>
 
     <div (click)="scrollService.scrollToSection('description-container')" id="scroll-down-mobile" class="row center gap-15 absolute">
-        <span>Scroll down</span>
+        <span>{{ getTranslation('SCROLL') }}</span>
         <img src="./assets/img/arrow.svg">
     </div>
 </header>

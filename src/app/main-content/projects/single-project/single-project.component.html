@@ -1,13 +1,13 @@
 <div id="single-project-container" class="column between gap-30">
-    <div *ngFor="let project of projects" class="row around single-project gap-20">
+    <div *ngFor="let project of getProjects()" class="row around single-project gap-20">
         <div class="image-container center">
             <img [src]="project.img">
         </div>
 
         <div class="column info-container gap-15">
-            <h4>{{project.name}}</h4>
-            <span>{{project.technologies}}</span>
-            <span [ngClass]="{'dark-mode-text': checkDarkMode()}">{{project.description}}</span>
+            <h4>{{ project.name }}</h4>
+            <span>{{ project.technologies }}</span>
+            <span [ngClass]="{'dark-mode-text': checkDarkMode()}">{{ project.description }}</span>
             <div class="row button-container gap-30">
                 <a [ngClass]="{'dark-mode-btn': checkDarkMode()}" [href]="project.link" target="_blank">Live Test</a>
                 <a [href]="project.github" target="_blank">Github</a>

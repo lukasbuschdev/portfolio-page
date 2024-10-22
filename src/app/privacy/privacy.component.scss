@@ -65,7 +65,8 @@ a, span, p, li {
 a {
     text-decoration: none;
     cursor: pointer;
-    color: #000
+    color: $blue;
+    padding: 0;
 }
 
 a[rel~=nofollow] {

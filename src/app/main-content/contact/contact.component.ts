@@ -5,6 +5,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { ScrollService } from '../../scroll.service';
 import { Router } from '@angular/router';
 import { ThemeService } from '../../theme.service';
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-contact',
@@ -14,7 +15,19 @@ import { ThemeService } from '../../theme.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  constructor(public scrollService: ScrollService, private router: Router, private themeService: ThemeService) {}
+  currentLanguage: string = 'en';
+
+  constructor(public scrollService: ScrollService, private router: Router, private themeService: ThemeService, private languageService: LanguageService) {}
+
+  ngOnInit() {
+    this.languageService.getCurrentLanguage().subscribe(lang => {
+      this.currentLanguage = lang;
+    });
+  }
+
+  getTranslation(key: string): string {
+    return this.languageService.getTranslation(key);
+  }
 
   checkDarkMode() {
     return this.themeService.getDarkModeStatus();

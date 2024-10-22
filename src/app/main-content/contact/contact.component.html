@@ -4,36 +4,40 @@
     <img id="ball14" class="absolute" src="./assets/img/ball14.svg">
 
     <div id="heading-container">
-        <h2>Contact</h2>
+        <h2>{{ getTranslation('CONTACT_HEADING') }}</h2>
     </div>
 
     <div id="text-form-container" class="row between">
         <div id="text-container" class="column gap-25">
-            <h4>Got a problem to solve?</h4>
+            <h4>{{ getTranslation('CONTACT_SUBHEADING') }}</h4>
             <div class="column gap-15">
-                <span [ngClass]="{'dark-mode-text': checkDarkMode()}">Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</span>
-                <span>Need a Frontend developer? <b>Contact me!</b></span>
+                <span [ngClass]="{'dark-mode-text': checkDarkMode()}">{{ getTranslation('CONTACT_TEXT') }}</span>
+                <span [innerHTML]="getTranslation('CONTACT_ME')"></span>
             </div>
         </div>
 
         <div id="form-container" class="right">
             <form (ngSubmit)="onSubmit(contactForm)" class="column gap-30" #contactForm="ngForm">
-                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required>
-                <span *ngIf="!name.valid && name.touched">Please enter your name!</span>
+                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" [placeholder]="getTranslation('CONTACT_NAME_PLACEHOLDER')" required>
+                <span *ngIf="!name.valid && name.touched">{{ getTranslation('CONTACT_ERROR_NAME') }}</span>
               
-                <input #email="ngModel" [(ngModel)]="contactData.email" type="text" id="mail" name="mail" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                <span *ngIf="!email.valid && email.touched">Please enter a valid email address!</span>
+                <input #email="ngModel" [(ngModel)]="contactData.email" type="text" id="mail" name="mail" placeholder="Your email" [placeholder]="getTranslation('CONTACT_MAIL_PLACEHOLDER')" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <span *ngIf="!email.valid && email.touched">{{ getTranslation('CONTACT_ERROR_MAIL') }}</span>
               
-                <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" id="message" name="message" placeholder="Your message" required></textarea>
-                <span *ngIf="!message.valid && message.touched">Please enter a message!</span>
-                <span *ngIf="message.valid && message.value?.length < 8">Message too short!</span>
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" id="message" name="message" placeholder="Your message" [placeholder]="getTranslation('CONTACT_MESSAGE_PLACEHOLDER')" required></textarea>
+                <span *ngIf="!message.valid && message.touched">{{ getTranslation('CONTACT_ERROR_MESSAGE') }}</span>
+                <span *ngIf="message.valid && message.value?.length < 8">{{ getTranslation('CONTACT_ERROR_MESSAGE_SHORT') }}</span>
               
                 <div class="row gap-10 privacy-agreement-container left">
-                  <input type="checkbox" id="termsCheckbox" name="terms" [(ngModel)]="termsAccepted" required>
-                  <span [ngClass]="{'dark-mode-text': checkDarkMode()}">I've read the <a (click)="openPrivacy()">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                    <input type="checkbox" id="termsCheckbox" name="terms" [(ngModel)]="termsAccepted" required>
+                    <span [ngClass]="{'dark-mode-text': checkDarkMode()}">
+                        {{ getTranslation('CONATCT_CONFIRMATION_CHECK_1') }}
+                        <a (click)="openPrivacy()">{{ getTranslation('CONATCT_CONFIRMATION_CHECK_PRIVACY') }}</a>
+                        {{ getTranslation('CONATCT_CONFIRMATION_CHECK_2') }}
+                    </span>
                 </div>
               
-                <input type="submit" id="button" value="Say hello"
+                <input type="submit" id="button" value="Say hello" [value]="getTranslation('CONTACT_BUTTON')"
                     [disabled]="!contactForm.form.valid || !termsAccepted || message.value?.length < 8" 
                     [ngClass]="{
                       'valid-button': contactForm.form.valid && termsAccepted && message.value?.length >= 8,
@@ -46,7 +50,7 @@
 
     <div id="popup-container" *ngIf="showPopup">
         <div id="popup" class="absolute center gap-15" [ngClass]="{'dark-mode': checkDarkMode()}">
-            <span [ngClass]="{'dark-mode-text': checkDarkMode()}">Your message has been successfully sent! <br> Thank you for reaching out. <br> :)</span>
+            <span [innerHTML]="getTranslation('CONATCT_CONFIRMATION_TEXT')" [ngClass]="{'dark-mode-text': checkDarkMode()}"></span>
         </div>
     </div>
 

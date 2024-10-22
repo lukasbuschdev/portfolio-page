@@ -3,21 +3,36 @@
         <img id="logo" src="./assets/img/logo_blue.svg">
         <div class="between menu-lang-container">
             <div id="language-container" class="row gap-15">
-                <span class="lang-btn">EN</span>
+                <span 
+                    class="lang-btn" 
+                    [class.active]="currentLanguage === 'en'" 
+                    (click)="changeLanguage('en')">
+                    EN
+                </span>
                 <span>|</span>
-                <span class="lang-btn">ES</span>
+                <span 
+                    class="lang-btn" 
+                    [class.active]="currentLanguage === 'es'" 
+                    (click)="changeLanguage('es')">
+                    ES
+                </span>
                 <span>|</span>
-                <span class="lang-btn">DE</span>
+                <span 
+                    class="lang-btn" 
+                    [class.active]="currentLanguage === 'de'" 
+                    (click)="changeLanguage('de')">
+                    DE
+                </span>
             </div>
             <img (click)="closeMenu()" id="menu" src="./assets/img/menu.svg">
         </div>
     </div>
 
     <nav class="center column">
-        <a (click)="closeMenu()" href="#description-container">About me</a>
-        <a (click)="closeMenu()" href="#skillset-container">Skill set</a>
-        <a (click)="closeMenu()" href="#projects-container">My work</a>
-        <a (click)="closeMenu()" href="#contact-container">Contact</a>
+        <a (click)="closeMenu()" href="#description-container">{{ getTranslation('ABOUT_ME') }}</a>
+        <a (click)="closeMenu()" href="#skillset-container">{{ getTranslation('SKILL_SET') }}</a>
+        <a (click)="closeMenu()" href="#projects-container">{{ getTranslation('MY_WORK') }}</a>
+        <a (click)="closeMenu()" href="#contact-container">{{ getTranslation('CONTACT') }}</a>
         <span (click)="toggleDarkMode()">
             <ng-container *ngIf="checkDarkMode(); else lightMode">Light</ng-container>
             <ng-template #lightMode>Dark</ng-template>
