@@ -234,9 +234,19 @@ form {
   
 
 @media(max-width: 800px) {
+    #contact-container {
+        height: 100vh;
+        padding: 40px 5%;
+    }
+
     #ball11 {
         bottom: 25vh !important;
         left: 1% !important;
+    }
+
+    #ball13 {
+        right: 10% !important;
+        top: 6vh !important;
     }
 
     #text-form-container {
@@ -252,15 +262,21 @@ form {
         #form-container {
             width: 100%;
             justify-content: center;
+
+            input, 
+            textarea {
+                font-size: 1.1rem;
+            }
+
+            textarea {
+                height: 18vh;
+            }
         }
     }
 }
 
 @media(max-width: 800px) {
-    #ball13 {
-        right: 10% !important;
-        top: 6vh !important;
-    }
+
 }
 
 @media(max-width: 600px) {
