@@ -1,14 +1,17 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedService } from '../shared.service';
-import { CommonModule, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { ThemeService } from '../theme.service';
 import { LanguageService } from '../language.service';
+import { CommonModule, NgIf } from '@angular/common';
+import { PrivacyEnComponent } from "./privacy-en/privacy-en.component";
+import { PrivacyEsComponent } from './privacy-es/privacy-es.component';
+import { PrivacyDeComponent } from './privacy-de/privacy-de.component';
 
 @Component({
   selector: 'app-privacy',
   standalone: true,
-  imports: [NgIf, CommonModule, NgSwitch, NgSwitchCase, NgSwitchDefault],
+  imports: [NgIf, CommonModule, PrivacyEnComponent, PrivacyEsComponent, PrivacyDeComponent],
   templateUrl: './privacy.component.html',
   styleUrls: ['./privacy.component.scss']
 })
@@ -17,10 +20,6 @@ export class PrivacyComponent {
   currentLanguage: string = 'en';
 
   constructor(private router: Router, public sharedService: SharedService, private themeService: ThemeService, private languageService: LanguageService) {}
-
-  checkDarkMode() {
-    return this.themeService.getDarkModeStatus();
-  }
 
   ngOnInit() {
     this.languageService.getCurrentLanguage().subscribe(lang => {
@@ -43,4 +42,8 @@ export class PrivacyComponent {
   scrollUp() {
     window.scrollTo(0, 0);
   }
+
+  checkDarkMode() {
+    return this.themeService.getDarkModeStatus();
+  } 
 }
