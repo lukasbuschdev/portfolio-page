@@ -235,7 +235,7 @@ form {
 
 @media(max-width: 800px) {
     #contact-container {
-        height: 100vh;
+        min-height: 100vh;
         padding: 40px 5%;
     }
 
@@ -273,10 +273,6 @@ form {
             }
         }
     }
-}
-
-@media(max-width: 800px) {
-
 }
 
 @media(max-width: 600px) {
