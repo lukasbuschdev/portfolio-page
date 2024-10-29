@@ -38,7 +38,8 @@ export class ContactComponent {
   contactData = {
     name: '',
     email: '',
-    message: ''
+    message: '',
+    language: ''
   }
 
   termsAccepted: boolean = false;
@@ -56,6 +57,8 @@ export class ContactComponent {
   };
 
   onSubmit(contactForm: NgForm) {
+    this.contactData.language = this.currentLanguage;
+
     if(!contactForm.valid || this.contactData.message.length < 8) {
       contactForm.form.markAllAsTouched();
       return;
