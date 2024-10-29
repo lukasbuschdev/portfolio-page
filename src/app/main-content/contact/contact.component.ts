@@ -19,17 +19,35 @@ export class ContactComponent {
 
   constructor(public scrollService: ScrollService, private router: Router, private themeService: ThemeService, private languageService: LanguageService) {}
 
-  ngOnInit() {
+  /**
+   * Lifecycle hook that is called after data-bound properties of a directive are initialized.
+   * Subscribes to the current language from the LanguageService and updates `currentLanguage`
+   * whenever a new language is selected.
+   *
+   * @returns {void}
+   */
+  ngOnInit(): void {
     this.languageService.getCurrentLanguage().subscribe(lang => {
       this.currentLanguage = lang;
     });
   }
 
+  /**
+   * Retrieves the translation for a specified key based on the current language.
+   *
+   * @param {string} key - The key for the translation string.
+   * @returns {string} - The translated string.
+   */
   getTranslation(key: string): string {
     return this.languageService.getTranslation(key);
   }
 
-  checkDarkMode() {
+  /**
+   * Checks the current theme mode status.
+   *
+   * @returns {boolean} - Returns true if dark mode is active, otherwise false.
+   */
+  checkDarkMode(): boolean {
     return this.themeService.getDarkModeStatus();
   }
 
@@ -56,15 +74,23 @@ export class ContactComponent {
     },
   };
 
-  onSubmit(contactForm: NgForm) {
+    /**
+   * Handles the submission of the contact form.
+   * Validates the form, updates the contact data with the current language, and sends
+   * the data via an HTTP POST request if all conditions are met.
+   *
+   * @param {NgForm} contactForm - The contact form to be submitted.
+   * @returns {void}
+   */
+  onSubmit(contactForm: NgForm): void {
     this.contactData.language = this.currentLanguage;
 
-    if(!contactForm.valid || this.contactData.message.length < 8) {
+    if (!contactForm.valid || this.contactData.message.length < 8) {
       contactForm.form.markAllAsTouched();
       return;
     }
 
-    if(!this.termsAccepted) return;
+    if (!this.termsAccepted) return;
 
     // Proceed with sending the email via HTTP POST
     this.http.post(this.post.endPoint, this.post.body(this.contactData))
@@ -81,20 +107,30 @@ export class ContactComponent {
       });
   }
 
-  messageSent() {
+  /**
+   * Displays a success popup after the form submission and fades it out after a delay.
+   *
+   * @returns {void}
+   */
+  messageSent(): void {
     this.showPopup = true;
 
     setTimeout(() => {
       const popupElement = document.querySelector('#popup-container');
-      if(popupElement) popupElement.classList.add('fade-out');
-      
+      if (popupElement) popupElement.classList.add('fade-out');
+
       setTimeout(() => {
         this.showPopup = false;
       }, 2000);
     }, 2000);
   }
 
-  openPrivacy() {
+  /**
+   * Navigates to the privacy page when called.
+   *
+   * @returns {void}
+   */
+  openPrivacy(): void {
     this.router.navigate(['/privacy']);
   }
 }

@@ -15,17 +15,34 @@ export class SingleProjectComponent {
 
   constructor(private themeService: ThemeService, private languageService: LanguageService) {}
 
-  ngOnInit() {
+    /**
+   * Initializes the component by subscribing to the current language observable
+   * and setting the language. Also checks the dark mode status.
+   *
+   * @returns {void}
+   */
+  ngOnInit(): void {
     this.languageService.getCurrentLanguage().subscribe(lang => {
       this.currentLanguage = lang;
     });
   }
 
-  checkDarkMode() {
+  /**
+   * Checks and returns the current dark mode status.
+   *
+   * @returns {boolean} - Returns true if dark mode is active, otherwise false.
+   */
+  checkDarkMode(): boolean {
     return this.themeService.getDarkModeStatus();
   }
 
-  getProjects() {
+  /**
+   * Retrieves the list of projects based on the current language.
+   * Each project includes its name, technologies, description, image, link, and GitHub URL.
+   *
+   * @returns {Array<Object>} - An array of project objects, each containing project details for the current language.
+   */
+  getProjects(): Array<Object> {
     const translations: any = {
       en: [
         {

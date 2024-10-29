@@ -14,7 +14,13 @@ export class CommentComponent {
 
   constructor(private languageService: LanguageService) {}
 
-  ngOnInit() {
+  /**
+   * Initializes the component and subscribes to language changes.
+   * Updates the current language whenever there is a change in the LanguageService.
+   *
+   * @returns {void}
+   */
+  ngOnInit(): void {
     this.languageService.getCurrentLanguage().subscribe(lang => {
       this.currentLanguage = lang;
     });
@@ -62,10 +68,22 @@ export class CommentComponent {
     }
   ];
   
+  /**
+   * Retrieves the project name from the provided comment object based on the current language.
+   *
+   * @param {any} comment - The comment object containing project details.
+   * @returns {string} The project name in the current language.
+   */
   getProject(comment: any): string {
     return comment.project[this.currentLanguage];
   }
 
+  /**
+   * Retrieves the text from the provided comment object based on the current language.
+   *
+   * @param {any} comment - The comment object containing text details.
+   * @returns {string} The text in the current language.
+   */
   getText(comment: any): string {
     return comment.text[this.currentLanguage];
   }

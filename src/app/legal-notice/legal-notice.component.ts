@@ -18,21 +18,39 @@ export class LegalNoticeComponent {
 
   constructor(public scrollService: ScrollService, private router: Router, public sharedService: SharedService, private themeService: ThemeService, private languageService: LanguageService) {}
 
-  ngOnInit() {
+    /**
+   * Initializes the component by subscribing to the current language setting.
+   * Updates the `currentLanguage` property whenever the language changes.
+   */
+  ngOnInit(): void {
     this.languageService.getCurrentLanguage().subscribe(lang => {
       this.currentLanguage = lang;
     });
   }
 
+  /**
+   * Retrieves the translation for a given key based on the current language.
+   * 
+   * @param {string} key - The key for the translation text to retrieve.
+   * @returns {string} The translated text corresponding to the key.
+   */
   getTranslation(key: string): string {
     return this.languageService.getTranslation(key);
   }
 
-  checkDarkMode() {
+  /**
+   * Checks and returns the current dark mode status.
+   * 
+   * @returns {boolean} `true` if dark mode is active, `false` otherwise.
+   */
+  checkDarkMode(): boolean {
     return this.themeService.getDarkModeStatus();
   }
 
-  closeLegalNotice() {
+  /**
+   * Closes the legal notice page by navigating back to the main content page.
+   */
+  closeLegalNotice(): void {
     this.router.navigate(['/main-content']);
   }
 }

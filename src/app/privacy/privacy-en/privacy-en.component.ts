@@ -18,25 +18,45 @@ export class PrivacyEnComponent {
 
   isScrollButtonVisible: boolean = false;
 
-  ngOnInit() {
+   /**
+   * Lifecycle hook that is called after data-bound properties are initialized.
+   * Initializes the component by checking the scroll position.
+   */
+  ngOnInit(): void {
     this.checkScroll();
   }
 
+  /**
+   * Checks the current scroll position and sets the visibility of the scroll-up button
+   * if the user has scrolled down more than 100 pixels.
+   * This method is triggered on the window scroll event.
+   */
   @HostListener('window:scroll', [])
-  checkScroll() {
+  checkScroll(): void {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     this.isScrollButtonVisible = scrollPosition > 100;
   }
-  
-  scrollUp() {
+
+  /**
+   * Scrolls the page to the top.
+   */
+  scrollUp(): void {
     window.scrollTo(0, 0);
   }
 
-  closePrivacy() {
+  /**
+   * Navigates to the main content page, effectively closing the privacy page.
+   */
+  closePrivacy(): void {
     this.router.navigate(['/main-content']);
   }
 
-  checkDarkMode() {
+  /**
+   * Checks if dark mode is active.
+   *
+   * @returns {boolean} True if dark mode is active, false otherwise.
+   */
+  checkDarkMode(): boolean {
     return this.themeService.getDarkModeStatus();
-  } 
+  }
 }

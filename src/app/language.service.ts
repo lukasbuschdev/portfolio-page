@@ -179,28 +179,46 @@ export class LanguageService {
     }
   };
 
-
   constructor() {
     this.loadLanguage();
   }
 
+    /**
+   * Returns an observable of the current language.
+   * @returns {Observable<string>} The observable representing the current language.
+   */
   getCurrentLanguage() {
     return this.currentLang.asObservable();
   }
 
+  /**
+   * Changes the current language and updates the selected language in local storage.
+   * @param {string} lang - The language to set as the current language.
+   */
   changeLanguage(lang: string) {
     this.currentLang.next(lang);
     localStorage.setItem('selectedLang', lang);
   }
 
+  /**
+   * Retrieves the translated value for a given key based on the current language.
+   * If the translation key does not exist, it returns the key itself as a fallback.
+   * @param {string} key - The key to look up in the translations.
+   * @returns {string} The translated value or the key if not found.
+   */
   getTranslation(key: string): string {
     const lang = this.currentLang.getValue();
     return this.translations[lang][key] || key;
   }
 
+  /**
+   * Loads the saved language from local storage and sets it as the current language.
+   * If no language is saved, it does nothing.
+   * @private
+   */
   private loadLanguage() {
     const savedLang = localStorage.getItem('selectedLang');
-    if(savedLang) {
+    if (savedLang) {
       this.currentLang.next(savedLang);
     }
   }

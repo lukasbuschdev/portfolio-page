@@ -16,18 +16,35 @@ export class ProjectsComponent {
   
   constructor(private themeService: ThemeService, private languageService: LanguageService) {}
 
-  ngOnInit() {
+  /**
+   * Initializes the component by subscribing to the current language observable
+   * and setting the language. Also checks the dark mode status.
+   *
+   * @returns {void}
+   */
+  ngOnInit(): void {
     this.languageService.getCurrentLanguage().subscribe(lang => {
       this.currentLanguage = lang;
     });
     this.checkDarkMode();
   }
 
+  /**
+   * Retrieves the translation for the specified key based on the current language.
+   *
+   * @param {string} key - The key for the translation text.
+   * @returns {string} - The translated text corresponding to the key.
+   */
   getTranslation(key: string): string {
     return this.languageService.getTranslation(key);
   }
 
-  checkDarkMode() {
+  /**
+   * Checks and returns the current dark mode status.
+   *
+   * @returns {boolean} - Returns true if dark mode is active, otherwise false.
+   */
+  checkDarkMode(): boolean {
     return this.themeService.getDarkModeStatus();
   }
 }

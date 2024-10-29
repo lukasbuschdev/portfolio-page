@@ -15,12 +15,22 @@ export class CommentsFromColleaguesComponent {
 
   constructor(private languageService: LanguageService) {}
 
-  ngOnInit() {
+    /**
+   * Lifecycle hook that is called after data-bound properties are initialized.
+   * Subscribes to the current language from the LanguageService and updates `currentLanguage`.
+   */
+  ngOnInit(): void {
     this.languageService.getCurrentLanguage().subscribe(lang => {
       this.currentLanguage = lang;
     });
   }
 
+  /**
+   * Retrieves the translated text for a given key based on the current language.
+   *
+   * @param {string} key - The key for the translation text to retrieve.
+   * @returns {string} The translated text for the provided key.
+   */
   getTranslation(key: string): string {
     return this.languageService.getTranslation(key);
   }

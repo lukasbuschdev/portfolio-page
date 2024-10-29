@@ -21,7 +21,12 @@ export class PrivacyComponent {
 
   constructor(private router: Router, public sharedService: SharedService, private themeService: ThemeService, private languageService: LanguageService) {}
 
-  ngOnInit() {
+  /**
+   * Initializes the component by subscribing to the current language setting
+   * and checking the scroll position to determine the visibility of the scroll button.
+   * Logs the current language to the console.
+   */
+  ngOnInit(): void {
     this.languageService.getCurrentLanguage().subscribe(lang => {
       this.currentLanguage = lang;
       console.log(this.currentLanguage);
@@ -29,21 +34,37 @@ export class PrivacyComponent {
     this.checkScroll();
   }
 
+  /**
+   * Checks the current scroll position and toggles the visibility of the scroll-up button
+   * based on whether the user has scrolled down more than 300 pixels.
+   * Triggered on the window scroll event.
+   */
   @HostListener('window:scroll', [])
-  checkScroll() {
+  checkScroll(): void {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     this.isScrollButtonVisible = scrollPosition > 300;
   }
 
-  closePrivacy() {
+  /**
+   * Navigates to the main content page, effectively closing the privacy page.
+   */
+  closePrivacy(): void {
     this.router.navigate(['/main-content']);
   }
 
-  scrollUp() {
+  /**
+   * Scrolls the window to the top of the page.
+   */
+  scrollUp(): void {
     window.scrollTo(0, 0);
   }
 
-  checkDarkMode() {
+  /**
+   * Checks and returns the current dark mode status.
+   * 
+   * @returns {boolean} `true` if dark mode is active, `false` otherwise.
+   */
+  checkDarkMode(): boolean {
     return this.themeService.getDarkModeStatus();
-  } 
+  }
 }

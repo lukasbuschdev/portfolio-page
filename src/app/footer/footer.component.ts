@@ -15,17 +15,30 @@ export class FooterComponent {
 
   constructor(public scrollService: ScrollService, private router: Router, private languageService: LanguageService) {}
 
-  ngOnInit() {
+  /**
+   * Initializes the component by subscribing to the current language from the language service.
+   * Updates the `currentLanguage` property whenever the language changes.
+   */
+  ngOnInit(): void {
     this.languageService.getCurrentLanguage().subscribe(lang => {
       this.currentLanguage = lang;
     });
   }
 
+  /**
+   * Retrieves the translation for a given key based on the current language.
+   * 
+   * @param {string} key - The key for the translation text to retrieve.
+   * @returns {string} The translated text corresponding to the key.
+   */
   getTranslation(key: string): string {
     return this.languageService.getTranslation(key);
   }
 
-  openLegalNotice() {
+  /**
+   * Navigates the user to the legal notice page.
+   */
+  openLegalNotice(): void {
     this.router.navigate(['/legal']);
   }
 }
