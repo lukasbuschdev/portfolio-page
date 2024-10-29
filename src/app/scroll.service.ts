@@ -14,14 +14,21 @@ export class ScrollService {
    * 
    * @param {string} sectionId - The ID of the section element to scroll to.
    */
-  scrollToSection(sectionId: string): void {
+  scrollToSection(sectionId: string, inputId?: string) {
     setTimeout(() => {
       const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      if(element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  
+        if(inputId) {
+          setTimeout(() => {
+            const inputElement = document.getElementById(inputId) as HTMLInputElement;
+            if(inputElement) {
+              inputElement.focus({ preventScroll: true });
+            }
+          }, 300);
+        }
       }
-
-      window.history.pushState(null, '', `#${sectionId}`);
     }, 100);
-  }
+  }  
 }

@@ -85,12 +85,12 @@ export class ContactComponent {
   onSubmit(contactForm: NgForm): void {
     this.contactData.language = this.currentLanguage;
 
-    if (!contactForm.valid || this.contactData.message.length < 8) {
+    if(!contactForm.valid || this.contactData.message.length < 8) {
       contactForm.form.markAllAsTouched();
       return;
     }
 
-    if (!this.termsAccepted) return;
+    if(!this.termsAccepted) return;
 
     // Proceed with sending the email via HTTP POST
     this.http.post(this.post.endPoint, this.post.body(this.contactData))
