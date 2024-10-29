@@ -17,24 +17,35 @@
         </div>
 
         <div id="form-container" class="right">
-            <form (ngSubmit)="onSubmit(contactForm)" class="column gap-30" #contactForm="ngForm">
+            <form (ngSubmit)="onSubmit(contactForm)" class="column gap-15" #contactForm="ngForm">
                 <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" [placeholder]="getTranslation('CONTACT_NAME_PLACEHOLDER')" required>
-                <span *ngIf="!name.valid && name.touched">{{ getTranslation('CONTACT_ERROR_NAME') }}</span>
+                <span class="error-message" [class.hidden]="name.valid || !name.touched">
+                  {{ getTranslation('CONTACT_ERROR_NAME') }}
+                </span>
               
                 <input #email="ngModel" [(ngModel)]="contactData.email" type="text" id="mail" name="mail" placeholder="Your email" [placeholder]="getTranslation('CONTACT_MAIL_PLACEHOLDER')" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                <span *ngIf="!email.valid && email.touched">{{ getTranslation('CONTACT_ERROR_MAIL') }}</span>
+                <span class="error-message" [class.hidden]="email.valid || !email.touched">
+                  {{ getTranslation('CONTACT_ERROR_MAIL') }}
+                </span>
               
-                <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" id="message" name="message" placeholder="Your message" [placeholder]="getTranslation('CONTACT_MESSAGE_PLACEHOLDER')" required></textarea>
-                <span *ngIf="!message.valid && message.touched">{{ getTranslation('CONTACT_ERROR_MESSAGE') }}</span>
-                <span *ngIf="message.valid && message.value?.length < 8">{{ getTranslation('CONTACT_ERROR_MESSAGE_SHORT') }}</span>
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your message" [placeholder]="getTranslation('CONTACT_MESSAGE_PLACEHOLDER')" required></textarea>
+
+                <span class="error-message" [class.hidden]="!message.touched || (message.value?.length >= 8)">
+                  <ng-container *ngIf="message.value?.length === 0">
+                    {{ getTranslation('CONTACT_ERROR_MESSAGE') }}
+                  </ng-container>
+                  <ng-container *ngIf="message.value?.length > 0 && message.value?.length < 8">
+                    {{ getTranslation('CONTACT_ERROR_MESSAGE_SHORT') }}
+                  </ng-container>
+                </span>
               
                 <div class="row gap-10 privacy-agreement-container left">
-                    <input type="checkbox" id="termsCheckbox" name="terms" [(ngModel)]="termsAccepted" required>
-                    <span [ngClass]="{'dark-mode-text': checkDarkMode()}">
-                        {{ getTranslation('CONATCT_CONFIRMATION_CHECK_1') }}
-                        <a (click)="openPrivacy()">{{ getTranslation('CONATCT_CONFIRMATION_CHECK_PRIVACY') }}</a>
-                        {{ getTranslation('CONATCT_CONFIRMATION_CHECK_2') }}
-                    </span>
+                  <input type="checkbox" id="termsCheckbox" name="terms" [(ngModel)]="termsAccepted" required>
+                  <span [ngClass]="{'dark-mode-text': checkDarkMode()}">
+                    {{ getTranslation('CONATCT_CONFIRMATION_CHECK_1') }}
+                    <a (click)="openPrivacy()">{{ getTranslation('CONATCT_CONFIRMATION_CHECK_PRIVACY') }}</a>
+                    {{ getTranslation('CONATCT_CONFIRMATION_CHECK_2') }}
+                  </span>
                 </div>
               
                 <input type="submit" id="button" value="Say hello" [value]="getTranslation('CONTACT_BUTTON')"
@@ -43,8 +54,7 @@
                       'valid-button': contactForm.form.valid && termsAccepted && message.value?.length >= 8,
                       'invalid-button': !contactForm.form.valid || !termsAccepted || message.value?.length < 8
                     }">
-
-            </form>                           
+              </form>                                        
         </div>
     </div>
 

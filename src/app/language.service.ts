@@ -163,7 +163,7 @@ export class LanguageService {
       CONTACT_MAIL_PLACEHOLDER: 'Deine E-Mail',
       CONTACT_MESSAGE_PLACEHOLDER: 'Deine Nachricht',
       CONTACT_ERROR_NAME: 'Bitte gib deinen Namen ein!',
-      CONTACT_ERROR_MAIL: 'Bitte gib eine gültige E-Mail-Adresse ein!',
+      CONTACT_ERROR_MAIL: 'E-Mail-Adresse ungültig!',
       CONTACT_ERROR_MESSAGE: 'Bitte gib eine Nachricht ein!',
       CONTACT_ERROR_MESSAGE_SHORT: 'Nachricht zu kurz!',
       CONTACT_BUTTON: 'Sag Hallo :)',

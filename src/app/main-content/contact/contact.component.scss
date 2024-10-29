@@ -76,6 +76,7 @@ form {
         border-radius: 10px;
         padding: 9px 18px;
         background-color: $white;
+        margin-bottom: 10px;
     }
 
     #message {
@@ -154,6 +155,17 @@ form {
         -webkit-text-fill-color: inherit !important;
         transition: background-color 5000s ease-in-out 0s;
     } 
+
+    .error-message {
+        height: 1.5em;
+        font-size: 0.875em;
+        color: red;
+        line-height: 1.5;
+      }
+
+    .error-message.hidden {
+      visibility: hidden;
+    }
 }
 
 #popup-container {
