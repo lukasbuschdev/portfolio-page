@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from "./navbar/navbar.component";
+import { NavbarComponent } from "../navbar/navbar.component";
 import { ScrollService } from '../scroll.service';
 import { ThemeService } from '../theme.service';
 import { CommonModule } from '@angular/common';

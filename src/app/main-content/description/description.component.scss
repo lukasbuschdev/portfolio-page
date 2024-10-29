@@ -2,7 +2,10 @@
 
 #description-container {
     gap: 50px;
-    
+    height: calc(100vh - 15vh);
+    position: relative;
+    padding: 100px 5% 60px 5%;
+
     #ball5 {
         height: 20vw;
         max-height: 150px;
@@ -19,10 +22,6 @@
         right: 24%;
         top: 40px;
     }
-
-    position: relative;
-    padding: 100px 5% 60px 5%;
-    height: 75vh;
 
     #heading-description-container {
         height: 40vh;

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { ScrollService } from '../../scroll.service';
-import { ThemeService } from '../../theme.service';
+import { ScrollService } from '../scroll.service';
+import { ThemeService } from '../theme.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { LanguageService } from '../../language.service';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-navbar',

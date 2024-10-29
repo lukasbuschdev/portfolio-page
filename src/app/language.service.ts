@@ -129,7 +129,7 @@ export class LanguageService {
       HELLO: 'Hallo! Ich bin Lukas',
       SCROLL_CAPITAL: 'SCROLL',
       SCROLL: 'Runterscrollen',
-      DESCRIPTION_HEADING: 'Lass uns zusammenarbeiten',
+      DESCRIPTION_HEADING: 'Lass uns zusammen arbeiten',
       I_AM: 'Ich bin',
       DESCRIPTION_TEXT_1: `Ich bin ein Frontend-Entwickler mit Sitz in Mérida, Mexiko.
                     Ich genieße es, Designern und Unternehmen zu helfen, ihre Ideen in die Realität umzusetzen.

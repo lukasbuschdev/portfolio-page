@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgIf } from '@angular/common';
+import { NavbarComponent } from "./navbar/navbar.component";
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,9 @@ import { NgIf } from '@angular/common';
     RouterOutlet,
     HeaderComponent,
     FooterComponent,
-    NgIf
-  ],
+    NgIf,
+    NavbarComponent
+],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
