@@ -28,12 +28,14 @@
     }
 
     #heading-container {
-        width: 45%;
+        width: 100%;
+        max-width: 1440px;
     }
 
     #text-form-container {
         position: relative;
         z-index: 9;
+        max-width: 1440px;
 
         #text-container {
             width: 45%;
@@ -298,5 +300,11 @@ form {
     #popup {
         height: 50vh;
         width: 90%;
+    }
+}
+
+@media(min-width: 1440px) {
+    #contact-container {
+        align-items: center;
     }
 }

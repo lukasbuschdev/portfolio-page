@@ -60,7 +60,7 @@ h6 {
 .container {
     position: relative !important;
     width: 100%;
-    max-width: 1024px;
+    max-width: 1440px;
     margin-top: calc(15vh + 6vh);
 
     a, span, p, li {
@@ -195,5 +195,12 @@ h6 {
         a, p, span, li {
             font-size: 0.8rem;
         }
+    }
+}
+
+@media(min-width: 1440px) {
+    .translations-content-container {
+        display: flex;
+        justify-content: center;
     }
 }

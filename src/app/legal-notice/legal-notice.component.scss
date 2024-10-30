@@ -74,3 +74,17 @@ a {
         font-size: 0.8rem;
     }
 }
+
+@media(min-width: 1440px) {
+    .legal-notice-container {
+        margin-top: 10vh;
+        align-items: center;
+        min-height: 85vh;
+        justify-content: center;
+    }
+
+    .legal-notice-segments {
+        justify-content: center;
+        max-height: 400px;
+    }
+}

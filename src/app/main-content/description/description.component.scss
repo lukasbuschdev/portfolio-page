@@ -3,6 +3,7 @@
 #description-container {
     gap: 50px;
     height: calc(100vh - 15vh);
+    max-height: 800px;
     position: relative;
     padding: 100px 5% 60px 5%;
 
@@ -26,6 +27,8 @@
     #heading-description-container {
         height: 40vh;
         gap: 40px;
+        max-width: 1440px;
+        max-height: 400px;
     }
 
     #heading-icon-container {

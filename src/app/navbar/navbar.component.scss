@@ -105,3 +105,9 @@ nav {
     }
   }
 }
+
+@media(min-width: 1440px) {
+  nav {
+    height: 10vh;
+  }
+}

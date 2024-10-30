@@ -3,9 +3,11 @@
 #single-project-container {
     position: relative;
     z-index: 9;
+    align-items: center;
     
     .single-project {
         width: 100%;
+        max-width: 1440px;
         height: 300px;
         align-items: center;
 
@@ -21,6 +23,7 @@
 
         .image-container {
             width: 40%;
+            max-width: 500px;
 
             img {
                 width: 100%;
@@ -33,6 +36,7 @@
 
         .info-container {
             width: 40%;
+            max-width: 500px;
 
             span:first-of-type {
                 color: $blue;
@@ -110,7 +114,4 @@
             }
         }
     }
-    
-
-
 }
