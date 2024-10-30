@@ -24,15 +24,15 @@
                     DE
                 </span>
             </div>
-            <img (click)="closeMenu()" id="menu" src="./assets/img/menu.svg">
+            <img (click)="closeMenu('')" id="menu" src="./assets/img/menu.svg">
         </div>
     </div>
 
     <nav class="center column">
-        <a (click)="closeMenu()" href="#description-container">{{ getTranslation('ABOUT_ME') }}</a>
-        <a (click)="closeMenu()" href="#skillset-container">{{ getTranslation('SKILL_SET') }}</a>
-        <a (click)="closeMenu()" href="#projects-container">{{ getTranslation('MY_WORK') }}</a>
-        <a (click)="closeMenu()" href="#contact-container">{{ getTranslation('CONTACT') }}</a>
+        <a (click)="closeMenu('description-container')">{{ getTranslation('ABOUT_ME') }}</a>
+        <a (click)="closeMenu('skillset-container')">{{ getTranslation('SKILL_SET') }}</a>
+        <a (click)="closeMenu('projects-container')">{{ getTranslation('MY_WORK') }}</a>
+        <a (click)="closeMenu('contact-container')">{{ getTranslation('CONTACT') }}</a>
         <span (click)="toggleDarkMode()">
             <ng-container *ngIf="checkDarkMode(); else lightMode">Light</ng-container>
             <ng-template #lightMode>Dark</ng-template>

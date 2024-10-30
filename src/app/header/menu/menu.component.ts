@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ThemeService } from '../../theme.service';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../language.service';
+import { ScrollService } from '../../scroll.service';
 
 @Component({
   selector: 'app-menu',
@@ -14,7 +15,7 @@ import { LanguageService } from '../../language.service';
 export class MenuComponent {
   currentLanguage: string = 'en';
 
-  constructor(private router: Router, private themeService: ThemeService, private languageService: LanguageService) { }
+  constructor(private router: Router, private themeService: ThemeService, private languageService: LanguageService, public scrollService: ScrollService) { }
 
     /**
    * Initializes the component by subscribing to the current language from the language service
@@ -58,9 +59,12 @@ export class MenuComponent {
 
   /**
    * Closes the menu and navigates to the main content route.
+   * @param {string} sectionId - Section of main-content
+   * Scrolls to designated section of main-content.
    */
-  closeMenu(): void {
+  closeMenu(sectionId: string): void {
     this.router.navigate(['/main-content']);
+    this.scrollService.scrollToSection(sectionId);
   }
 
   /**
