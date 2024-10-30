@@ -1,5 +1,9 @@
 <img id="back" class="absolute" (click)="closePrivacy()" src="./assets/img/arrow.svg" appScrollAnimation animationClass="fade-in-bottom">
 
+<div id="scroll-up" class="center" *ngIf="isScrollButtonVisible" (click)="scrollUp()">
+  <img id="scroll-arrow" src="./assets/img/arrow_white.svg">
+</div>
+
 <div *ngIf="currentLanguage === 'en'">
   <app-privacy-en></app-privacy-en>
 </div>
