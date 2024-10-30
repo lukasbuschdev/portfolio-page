@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
       // Update footer and header visibility based on specific routes
       if(event instanceof NavigationEnd) {
         const url = event.url;
-        this.isFooterVisible = url !== '/menu' && url !== '/privacy' && url !== '/legal';
+        this.isFooterVisible = url !== '/menu';
         this.isHeaderVisible = url !== '/menu' && url !== '/privacy' && url !== '/legal';
 
         // Scroll to the top of the window

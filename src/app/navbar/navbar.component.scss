@@ -88,7 +88,12 @@ nav {
 
 @media(max-width: 800px) {
   nav {
-    height: 15vh;
+    height: 12vh;
+
+    img:first-of-type {
+      height: 50px;
+      width: 50px;
+    }
 
     div:last-of-type,
     #language-container {

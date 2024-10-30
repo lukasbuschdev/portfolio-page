@@ -115,6 +115,9 @@ header {
 
 @media(max-width: 800px) {
     header {
+        height: calc(100vh - 12vh) !important;
+        margin-top: 12vh;
+
         #ball3 {
             width: 90%;
             max-width: 500px;

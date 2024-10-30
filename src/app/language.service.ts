@@ -106,7 +106,7 @@ export class LanguageService {
       CONTACT_MAIL_PLACEHOLDER: 'Tu correo electrónico',
       CONTACT_MESSAGE_PLACEHOLDER: 'Tu mensaje',
       CONTACT_ERROR_NAME: '¡Por favor, ingresa tu nombre!',
-      CONTACT_ERROR_MAIL: '¡Por favor, ingresa una dirección de correo válida!',
+      CONTACT_ERROR_MAIL: '¡Correo no válido!',
       CONTACT_ERROR_MESSAGE: '¡Por favor, ingresa un mensaje!',
       CONTACT_ERROR_MESSAGE_SHORT: '¡El mensaje es demasiado corto!',
       CONTACT_BUTTON: 'Di hola :)',
