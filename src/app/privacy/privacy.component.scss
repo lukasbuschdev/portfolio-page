@@ -57,25 +57,33 @@ h6 {
     font-size: cacl(16px)
 }
 
-a, span, p, li {
-    font-family: $textfont !important;
-    padding: 1rem 0;
+.container {
+    position: relative !important;
+    width: 100%;
+    max-width: 1024px;
+    margin-top: calc(15vh + 6vh);
+
+    a, span, p, li {
+        font-family: $textfont !important;
+        padding: 1rem 0;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: $blue !important;
+        padding: 0;
+    }
+    
+    a[rel~=nofollow] {
+        color: $blue
+    }
+    
+    a[rel~=nofollow]:hover {
+        text-decoration: none
+    }
 }
 
-a {
-    text-decoration: none;
-    cursor: pointer;
-    color: $blue !important;
-    padding: 0;
-}
-
-a[rel~=nofollow] {
-    color: $blue
-}
-
-a[rel~=nofollow]:hover {
-    text-decoration: none
-}
 
 .visible {
     display: block
@@ -87,13 +95,6 @@ a[rel~=nofollow]:hover {
 
 .page {
     width: 100%
-}
-
-.container {
-    position: relative;
-    width: 100%;
-    max-width: 1024px;
-    margin-top: 6vh;
 }
 
 .header {
@@ -143,12 +144,13 @@ a[rel~=nofollow]:hover {
 }
 
 #back {
-    top: 5%;
+    top: calc(5% + 15vh);
     left: 3%;
     max-height: 30px;
     height: 20vw;
     rotate: 90deg;
     cursor: pointer;
+    z-index: 9;
 
     &:hover {
         filter: brightness(0.8);
@@ -178,8 +180,20 @@ a[rel~=nofollow]:hover {
     }
 }
 
+@media(max-width: 800px) {
+    .container {
+        margin-top: calc(12vh + 6vh);
+    }
+
+    #back {
+        top: calc(5% + 12vh);
+    }
+}
+
 @media(max-width: 400px) {
-    a, p, span, li {
-        font-size: 0.8rem;
+    .container {
+        a, p, span, li {
+            font-size: 0.8rem;
+        }
     }
 }

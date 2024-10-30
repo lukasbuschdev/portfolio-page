@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ScrollAnimationDirective } from '../../scroll-animation.directive';
 
 @Component({
   selector: 'app-skillset',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollAnimationDirective],
   templateUrl: './skillset.component.html',
   styleUrls: ['./skillset.component.scss']
 })

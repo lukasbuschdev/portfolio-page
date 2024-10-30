@@ -1,8 +1,8 @@
-<img id="back" class="absolute" (click)="closeLegalNotice()" src="./assets/img/arrow.svg">
+<img id="back" class="absolute" (click)="closeLegalNotice()" src="./assets/img/arrow.svg" appScrollAnimation animationClass="fade-in-bottom">
 
 <div [ngClass]="{'dark-mode-privacy-legal': checkDarkMode()}" class="legal-notice-container column">
-    <h2 data-lang="legal-notice-heading">Legal notice</h2>
-    <div class="column gap-30 legal-notice-segments">
+    <h2 data-lang="legal-notice-heading" appScrollAnimation animationClass="fade-in-bottom">Legal notice</h2>
+    <div class="column gap-30 legal-notice-segments" appScrollAnimation animationClass="fade-in-bottom">
         <div class="column gap-20">
             <h3 data-lang="legal-notice-heading-2">{{ getTranslation('LEGAL_NOTICE_HEADING') }}</h3>
             <div class="column gap-10">

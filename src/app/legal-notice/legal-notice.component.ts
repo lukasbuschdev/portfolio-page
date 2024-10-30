@@ -5,11 +5,12 @@ import { SharedService } from '../shared.service';
 import { ThemeService } from '../theme.service';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../language.service';
+import { ScrollAnimationDirective } from '../scroll-animation.directive';
 
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollAnimationDirective],
   templateUrl: './legal-notice.component.html',
   styleUrl: './legal-notice.component.scss'
 })

@@ -6,7 +6,7 @@
     <img id="ball11" src="./assets/img/ball11.svg" class="absolute">
     <img id="ball12" src="./assets/img/ball12.svg" class="absolute">
 
-    <div id="projects-heading-container" class="column gap-20">
+    <div id="projects-heading-container" class="column gap-20" appScrollAnimation animationClass="fade-in-bottom">
         <h2>{{ getTranslation('PROJECTS_HEADING') }}</h2>
         <span [ngClass]="{'dark-mode-text': checkDarkMode()}">{{ getTranslation('PROJECTS_TEXT') }}</span>
     </div>

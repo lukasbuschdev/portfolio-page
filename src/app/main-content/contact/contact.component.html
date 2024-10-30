@@ -4,11 +4,11 @@
     <img id="ball14" class="absolute" src="./assets/img/ball14.svg">
 
     <div id="heading-container">
-        <h2>{{ getTranslation('CONTACT_HEADING') }}</h2>
+        <h2 appScrollAnimation animationClass="fade-in-bottom">{{ getTranslation('CONTACT_HEADING') }}</h2>
     </div>
 
     <div id="text-form-container" class="row between">
-        <div id="text-container" class="column gap-25">
+        <div id="text-container" class="column gap-25" appScrollAnimation animationClass="fade-in-bottom">
             <h4>{{ getTranslation('CONTACT_SUBHEADING') }}</h4>
             <div class="column gap-15">
                 <span [ngClass]="{'dark-mode-text': checkDarkMode()}">{{ getTranslation('CONTACT_TEXT') }}</span>
@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <div id="form-container" class="right">
+        <div id="form-container" class="right" appScrollAnimation animationClass="fade-in-bottom">
             <form (ngSubmit)="onSubmit(contactForm)" class="column gap-15" #contactForm="ngForm">
                 <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" [placeholder]="getTranslation('CONTACT_NAME_PLACEHOLDER')" required>
                 <span class="error-message" [class.hidden]="name.valid || !name.touched">

@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { LanguageService } from '../../../language.service';
+import { ScrollAnimationDirective } from '../../../scroll-animation.directive';
 
 @Component({
   selector: 'app-comment',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollAnimationDirective],
   templateUrl: './comment.component.html',
   styleUrls: ['./comment.component.scss']
 })

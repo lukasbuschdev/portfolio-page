@@ -7,11 +7,12 @@ import { CommonModule, NgIf } from '@angular/common';
 import { PrivacyEnComponent } from "./privacy-en/privacy-en.component";
 import { PrivacyEsComponent } from './privacy-es/privacy-es.component';
 import { PrivacyDeComponent } from './privacy-de/privacy-de.component';
+import { ScrollAnimationDirective } from '../scroll-animation.directive';
 
 @Component({
   selector: 'app-privacy',
   standalone: true,
-  imports: [NgIf, CommonModule, PrivacyEnComponent, PrivacyEsComponent, PrivacyDeComponent],
+  imports: [NgIf, CommonModule, PrivacyEnComponent, PrivacyEsComponent, PrivacyDeComponent, ScrollAnimationDirective],
   templateUrl: './privacy.component.html',
   styleUrls: ['./privacy.component.scss']
 })

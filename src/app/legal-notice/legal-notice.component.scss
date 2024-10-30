@@ -4,7 +4,7 @@
     padding: 12vh 4rem;
     width: 100%;
     gap: 80px;
-    height: 100vh;
+    margin-top: 15vh;
 }
 
 .legal-notice-segments {
@@ -34,7 +34,7 @@ a {
 }
 
 #back {
-    top: 5%;
+    top: calc(5% + 15vh);
     left: 4%;
     max-height: 30px;
     height: 20vw;
@@ -47,8 +47,14 @@ a {
 }
 
 @media(max-width: 800px) {
+    #back {
+        top: calc(5% + 12vh);
+    }
+    
     .legal-notice-container {
         gap: 20px;
+        height: calc(100vh - 12vh);
+        margin-top: 12vh;
     }
 
     .legal-notice-container h3 {

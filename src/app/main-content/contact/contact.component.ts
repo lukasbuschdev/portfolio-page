@@ -6,11 +6,12 @@ import { ScrollService } from '../../scroll.service';
 import { Router } from '@angular/router';
 import { ThemeService } from '../../theme.service';
 import { LanguageService } from '../../language.service';
+import { ScrollAnimationDirective } from '../../scroll-animation.directive';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, ScrollAnimationDirective],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })

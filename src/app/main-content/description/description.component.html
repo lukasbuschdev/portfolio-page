@@ -3,7 +3,7 @@
     <img id="ball6" src="./assets/img/ball6.svg">
 
     <div id="heading-description-container" class="row center">
-        <div id="heading-icon-container" class="column gap-30 between">
+        <div id="heading-icon-container" class="column gap-30 between" appScrollAnimation animationClass="fade-in-bottom">
             <div id="heading-container" class="column gap-30">
                 <h2>{{ getTranslation('DESCRIPTION_HEADING') }}</h2>
                 <h3>{{ getTranslation('I_AM') }}</h3>
@@ -25,7 +25,7 @@
             </div>
         </div>
         
-        <div id="my-description-container" class="column between gap-20">
+        <div id="my-description-container" class="column between gap-20" appScrollAnimation animationClass="fade-in-bottom">
             <div id="my-description" class="column gap-20">
                 <span [ngClass]="{'dark-mode-text': checkDarkMode()}">{{ getTranslation('DESCRIPTION_TEXT_1') }}</span>
                 <span [ngClass]="{'dark-mode-text': checkDarkMode()}">{{ getTranslation('DESCRIPTION_TEXT_2') }}</span>

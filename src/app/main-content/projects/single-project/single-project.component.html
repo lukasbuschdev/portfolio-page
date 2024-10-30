@@ -1,4 +1,4 @@
-<div id="single-project-container" class="column between gap-30">
+<div id="single-project-container" class="column between gap-30" appScrollAnimation animationClass="fade-in-bottom">
     <div *ngFor="let project of getProjects()" class="row around single-project gap-20">
         <div class="image-container center">
             <img [src]="project.img">

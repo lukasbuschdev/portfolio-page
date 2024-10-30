@@ -4,11 +4,12 @@ import { ScrollService } from '../../scroll.service';
 import { CommonModule, NgIf } from '@angular/common';
 import { SharedService } from '../../shared.service';
 import { Router } from '@angular/router';
+import { ScrollAnimationDirective } from '../../scroll-animation.directive';
 
 @Component({
   selector: 'app-privacy-es',
   standalone: true,
-  imports: [NgIf, CommonModule],
+  imports: [NgIf, CommonModule, ScrollAnimationDirective],
   templateUrl: './privacy-es.component.html',
   styleUrl: './privacy-es.component.scss',
   encapsulation: ViewEncapsulation.None

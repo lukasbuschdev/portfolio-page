@@ -3,11 +3,12 @@ import { SingleProjectComponent } from "./single-project/single-project.componen
 import { CommonModule } from '@angular/common';
 import { ThemeService } from '../../theme.service';
 import { LanguageService } from '../../language.service';
+import { ScrollAnimationDirective } from '../../scroll-animation.directive';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [SingleProjectComponent, CommonModule],
+  imports: [SingleProjectComponent, CommonModule, ScrollAnimationDirective],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })

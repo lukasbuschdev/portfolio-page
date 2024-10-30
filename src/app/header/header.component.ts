@@ -4,18 +4,24 @@ import { ScrollService } from '../scroll.service';
 import { ThemeService } from '../theme.service';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../language.service';
+import { ScrollAnimationDirective } from '../scroll-animation.directive';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  imports: [NavbarComponent, CommonModule]
+  imports: [NavbarComponent, CommonModule, ScrollAnimationDirective]
 })
 export class HeaderComponent {
   currentLanguage: string = 'en';
 
-  constructor(public scrollService: ScrollService, private themeService: ThemeService, private languageService: LanguageService) { }
+  constructor(
+    public scrollService: ScrollService, 
+    private themeService: ThemeService, 
+    private languageService: LanguageService,
+
+  ) { }
 
   /**
    * Initializes the component by subscribing to the current language from the language service

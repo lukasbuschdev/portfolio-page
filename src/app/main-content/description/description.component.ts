@@ -3,11 +3,12 @@ import { ScrollService } from '../../scroll.service';
 import { ThemeService } from '../../theme.service';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../language.service';
+import { ScrollAnimationDirective } from '../../scroll-animation.directive';
 
 @Component({
   selector: 'app-description',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollAnimationDirective],
   templateUrl: './description.component.html',
   styleUrls: ['./description.component.scss']
 })

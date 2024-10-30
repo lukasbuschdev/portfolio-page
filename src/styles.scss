@@ -253,3 +253,64 @@ input[type="number"] {
     transition: color 200ms ease-in-out;
   }
 }
+
+
+
+// ANIMATIONS
+
+// Fade in from the left
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Fade in from the right
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Fade in from the bottom
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease-out;
+}
+
+.fade-in-left {
+  opacity: 0;
+  animation: fadeInLeft 500ms ease-out forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  animation: fadeInRight 500ms ease-out forwards;
+}
+
+.fade-in-bottom {
+  opacity: 0;
+  animation: fadeInBottom 500ms ease-out forwards;
+}
