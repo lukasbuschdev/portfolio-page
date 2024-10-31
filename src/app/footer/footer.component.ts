@@ -41,4 +41,12 @@ export class FooterComponent {
   openLegalNotice(): void {
     this.router.navigate(['/legal']);
   }
+
+  /**
+   * Navigates the user to the contact section of the main-content page and focus on input #name.
+   */
+  gotToContact(sectionId: string, contactInput: string) {
+    this.router.navigate(['/main-content']);
+    this.scrollService.scrollToSection(sectionId, contactInput);
+  }
 }
