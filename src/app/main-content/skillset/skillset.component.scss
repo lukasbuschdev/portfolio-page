@@ -7,6 +7,7 @@
     background-image: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
     padding: 60px 5%;
     gap: 80px;
+    align-items: center;
 
     h2 {
         color: $white;
@@ -15,6 +16,7 @@
     #skillset {
         flex-wrap: wrap;
         gap: 90px;
+        max-width: 1440px;
         
         .skill {
             width: 105px;
