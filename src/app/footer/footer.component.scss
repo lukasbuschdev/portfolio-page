@@ -3,9 +3,15 @@
 footer {
     width: 100%;
     height: 35vh;
-    max-height: 250px;
+    max-height: 280px;
     background-image: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
     padding: 0 5%;
+    justify-content: center;
+
+    .footer-container {
+        width: 100%;
+        max-width: 1440px;
+    }
 
     #name-legal-notice {
         color: $white;
@@ -41,9 +47,12 @@ footer {
 
 @media(max-width: 600px) {
     footer {
-        height: fit-content;
-        flex-direction: column;
-        gap: 5vh;
         padding: 5vh 5%;
+        height: fit-content;
+
+        .footer-container {
+            gap: 5vh;
+            flex-direction: column;
+        }
     }
 }

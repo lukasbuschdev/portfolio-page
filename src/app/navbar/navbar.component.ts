@@ -75,4 +75,9 @@ export class NavbarComponent {
   toggleDarkMode(): void {
     this.themeService.toggleDarkMode();
   }
+
+  goToSection(sectionId: string, contactContainer: string) {
+    this.router.navigate(['/main-content']);
+    this.scrollService.scrollToSection(sectionId, contactContainer);
+  }
 }

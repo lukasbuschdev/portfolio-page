@@ -6,9 +6,15 @@ nav {
   padding: 2% 5%;
   background: $white;
   align-items: center;
+  justify-content: center;
   position: fixed;
   z-index: 99;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+  .nav-container {
+    width: 100%;
+    max-width: 1440px;
+  }
 
   #menu {
     display: none;
@@ -90,19 +96,24 @@ nav {
   nav {
     height: 12vh;
 
-    img:first-of-type {
-      height: 50px;
-      width: 50px;
+    .nav-container {
+      align-items: center;
+
+      img:first-of-type {
+        height: 50px;
+        width: 50px;
+      }
+  
+      div:last-of-type,
+      #language-container {
+        display: none;
+      }
+  
+      #menu {
+        display: block !important;
+      }
     }
 
-    div:last-of-type,
-    #language-container {
-      display: none;
-    }
-
-    #menu {
-      display: block !important;
-    }
   }
 }
 

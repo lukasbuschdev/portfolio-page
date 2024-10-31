@@ -1,42 +1,46 @@
 <nav class="row between" [ngClass]="{'dark-mode': checkDarkMode()}">
-    <div class="center">
-        <img src="./assets/img/logo_blue.svg">
+    <div class="nav-container row between">
+      <div class="center">
+          <img src="./assets/img/logo_blue.svg">
+      </div>
+    
+      <div class="nav-langage column gap-5">
+        <div id="language-container" class="row right gap-15">
+            <span 
+              class="lang-btn" 
+              [class.active]="currentLanguage === 'en'" 
+              (click)="changeLanguage('en')">
+              EN
+            </span>
+            <span>|</span>
+            <span 
+              class="lang-btn" 
+              [class.active]="currentLanguage === 'es'" 
+              (click)="changeLanguage('es')">
+              ES
+            </span>
+            <span>|</span>
+            <span 
+              class="lang-btn" 
+              [class.active]="currentLanguage === 'de'" 
+              (click)="changeLanguage('de')">
+              DE
+            </span>
+        </div>
+      
+        <div class="links-container center gap-20">
+            <span (click)="goToSection('description-container', '')">{{ getTranslation('ABOUT_ME') }}</span>
+            <span (click)="goToSection('skillset-container', '')">{{ getTranslation('SKILL_SET') }}</span>
+            <span (click)="goToSection('projects-container', '')">{{ getTranslation('MY_WORK') }}</span>
+            <span (click)="goToSection('contact-container', 'name')">{{ getTranslation('CONTACT') }}</span>
+            <span (click)="toggleDarkMode()">
+                <ng-container *ngIf="checkDarkMode(); else lightMode">Light</ng-container>
+                <ng-template #lightMode>Dark</ng-template>
+            </span>
+        </div>
+      </div>
+    
+      <img (click)="openMenu()" id="menu" src="./assets/img/menu.svg"
+          [ngStyle]="{'filter': checkDarkMode() ? 'brightness(0) invert(1)' : 'brightness(1) invert(0)'}">
     </div>
-  
-    <div id="language-container" class="row absolute gap-15">
-        <span 
-          class="lang-btn" 
-          [class.active]="currentLanguage === 'en'" 
-          (click)="changeLanguage('en')">
-          EN
-        </span>
-        <span>|</span>
-        <span 
-          class="lang-btn" 
-          [class.active]="currentLanguage === 'es'" 
-          (click)="changeLanguage('es')">
-          ES
-        </span>
-        <span>|</span>
-        <span 
-          class="lang-btn" 
-          [class.active]="currentLanguage === 'de'" 
-          (click)="changeLanguage('de')">
-          DE
-        </span>
-    </div>
-  
-    <div class="links-container center gap-20">
-        <span (click)="scrollService.scrollToSection('description-container')">{{ getTranslation('ABOUT_ME') }}</span>
-        <span (click)="scrollService.scrollToSection('skillset-container')">{{ getTranslation('SKILL_SET') }}</span>
-        <span (click)="scrollService.scrollToSection('projects-container')">{{ getTranslation('MY_WORK') }}</span>
-        <span (click)="scrollService.scrollToSection('contact-container', 'name')">{{ getTranslation('CONTACT') }}</span>
-        <span (click)="toggleDarkMode()">
-            <ng-container *ngIf="checkDarkMode(); else lightMode">Light</ng-container>
-            <ng-template #lightMode>Dark</ng-template>
-        </span>
-    </div>
-  
-    <img (click)="openMenu()" id="menu" src="./assets/img/menu.svg"
-        [ngStyle]="{'filter': checkDarkMode() ? 'brightness(0) invert(1)' : 'brightness(1) invert(0)'}">
 </nav>

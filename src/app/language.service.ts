@@ -54,7 +54,7 @@ export class LanguageService {
       CONTACT_ERROR_MESSAGE_SHORT: 'Message too short!',
       CONTACT_BUTTON: 'Say hello :)',
       FOOTER_LEGAL_NOTICE: 'Legal Notice',
-      LEGAL_NOTICE_HEADING: 'LegalNotice',
+      LEGAL_NOTICE_HEADING: 'Legal Notice',
       LEGAL_NOTICE_SUBHEADING: 'Information according to § 5 TGM',
       LEGAL_NOTICE_CITY: 'Merida',
       LEGAL_NOTICE_COUNTRY: 'Mexico',
