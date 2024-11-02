@@ -5,11 +5,11 @@
 </div>
 
 <div *ngIf="currentLanguage === 'en'">
-  <app-privacy-en></app-privacy-en>
+  <app-privacy-en [parent]="this"></app-privacy-en>
 </div>
 <div *ngIf="currentLanguage === 'es'">
-  <app-privacy-es></app-privacy-es>
+  <app-privacy-es [parent]="this"></app-privacy-es>
 </div>
 <div *ngIf="currentLanguage === 'de'">
-  <app-privacy-de></app-privacy-de>
+  <app-privacy-de [parent]="this"></app-privacy-de>
 </div>

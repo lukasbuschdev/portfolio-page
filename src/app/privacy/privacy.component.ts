@@ -7,6 +7,7 @@ import { PrivacyEnComponent } from "./privacy-en/privacy-en.component";
 import { PrivacyEsComponent } from './privacy-es/privacy-es.component';
 import { PrivacyDeComponent } from './privacy-de/privacy-de.component';
 import { ScrollAnimationDirective } from '../scroll-animation.directive';
+import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-privacy',
@@ -19,7 +20,7 @@ export class PrivacyComponent {
   isScrollButtonVisible = false;
   currentLanguage: string = 'en';
 
-  constructor(private router: Router, private themeService: ThemeService, private languageService: LanguageService) {}
+  constructor(private router: Router, private themeService: ThemeService, private languageService: LanguageService, public scrollService: ScrollService) {}
 
   /**
    * Initializes the component by subscribing to the current language setting
@@ -29,7 +30,6 @@ export class PrivacyComponent {
   ngOnInit(): void {
     this.languageService.getCurrentLanguage().subscribe(lang => {
       this.currentLanguage = lang;
-      console.log(this.currentLanguage);
     });
     this.checkScroll();
   }
@@ -66,5 +66,14 @@ export class PrivacyComponent {
    */
   checkDarkMode(): boolean {
     return this.themeService.getDarkModeStatus();
+  }
+
+  /**
+   * Closes the privacy page by navigating back to the main content page.
+   * Scrolls to contact section and activates the first input field 'name'.
+   */
+  openContact() {
+    this.closePrivacy();
+    setTimeout(() => this.scrollService.scrollToSection('contact-container', 'name'), 100);
   }
 }
