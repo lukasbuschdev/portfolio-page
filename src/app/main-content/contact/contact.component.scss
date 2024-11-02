@@ -5,6 +5,7 @@
     width: 100%;
     padding: 60px 5% 40px;
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+    scroll-margin-top: 15vh;
 
     #ball13 {
         top: 4vh;
@@ -251,6 +252,7 @@ form {
     #contact-container {
         min-height: 100vh;
         padding: 40px 5%;
+        scroll-margin-top: 12vh;
     }
 
     #ball11 {

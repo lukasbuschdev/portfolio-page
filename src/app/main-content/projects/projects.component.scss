@@ -4,6 +4,7 @@
     padding: 80px 5%;
     position: relative;
     gap: 10vh;
+    scroll-margin-top: 15vh;
     
     #projects-heading-container {
         position: relative;
@@ -63,6 +64,12 @@
         bottom: 3%;
         right: 5%;
     } 
+}
+
+@media(max-width: 800px) {
+    #projects-container {
+        scroll-margin-top: 12vh;
+    }
 }
 
 @media(max-width: 600px) {

@@ -62,9 +62,11 @@ export class MenuComponent {
    * @param {string} sectionId - Section of main-content
    * Scrolls to designated section of main-content.
    */
-  closeMenu(sectionId: string): void {
+  closeMenu(sectionId: string, inputId: string): void {
     this.router.navigate(['/main-content']);
-    this.scrollService.scrollToSection(sectionId);
+    setTimeout(() => {
+      this.scrollService.scrollToSection(sectionId, inputId);
+    }, 200);   
   }
 
   /**

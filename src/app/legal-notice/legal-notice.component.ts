@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ScrollService } from '../scroll.service';
 import { Router } from '@angular/router';
-import { SharedService } from '../shared.service';
 import { ThemeService } from '../theme.service';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../language.service';
@@ -17,7 +16,7 @@ import { ScrollAnimationDirective } from '../scroll-animation.directive';
 export class LegalNoticeComponent {
   currentLanguage: string = 'en';
 
-  constructor(public scrollService: ScrollService, private router: Router, public sharedService: SharedService, private themeService: ThemeService, private languageService: LanguageService) {}
+  constructor(public scrollService: ScrollService, private router: Router, private themeService: ThemeService, private languageService: LanguageService) {}
 
     /**
    * Initializes the component by subscribing to the current language setting.
@@ -53,5 +52,14 @@ export class LegalNoticeComponent {
    */
   closeLegalNotice(): void {
     this.router.navigate(['/main-content']);
+  }
+
+  /**
+   * Closes the legal notice page by navigating back to the main content page.
+   * Scrolls to contact section and activates the first input field 'name'.
+   */
+  openContact() {
+    this.closeLegalNotice();
+    setTimeout(() => this.scrollService.scrollToSection('contact-container', 'name'), 50);
   }
 }

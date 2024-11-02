@@ -6,6 +6,7 @@
     max-height: 800px;
     position: relative;
     padding: 100px 5% 60px 5%;
+    scroll-margin-top: 15vh;
 
     #ball5 {
         height: 20vw;
@@ -99,6 +100,7 @@
     #description-container {
         height: fit-content;
         min-height: 100vh;
+        scroll-margin-top: 12vh;
         
         #heading-description-container {
             height: fit-content;

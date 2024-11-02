@@ -1,6 +1,5 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { SharedService } from '../shared.service';
 import { ThemeService } from '../theme.service';
 import { LanguageService } from '../language.service';
 import { CommonModule, NgIf } from '@angular/common';
@@ -20,7 +19,7 @@ export class PrivacyComponent {
   isScrollButtonVisible = false;
   currentLanguage: string = 'en';
 
-  constructor(private router: Router, public sharedService: SharedService, private themeService: ThemeService, private languageService: LanguageService) {}
+  constructor(private router: Router, private themeService: ThemeService, private languageService: LanguageService) {}
 
   /**
    * Initializes the component by subscribing to the current language setting

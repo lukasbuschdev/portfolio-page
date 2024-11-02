@@ -11,6 +11,7 @@ header {
     z-index: 9;
     transition: background-color 200ms ease-in-out;
     align-items: center;
+    scroll-margin-top: 15vh;
 
     #limiter {
         height: 100%;
@@ -125,6 +126,7 @@ header {
     header {
         height: calc(100vh - 12vh) !important;
         margin-top: 12vh;
+        scroll-margin-top: 12vh;
 
         #ball3 {
             width: 90%;
