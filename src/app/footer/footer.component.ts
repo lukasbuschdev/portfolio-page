@@ -20,9 +20,7 @@ export class FooterComponent {
    * Updates the `currentLanguage` property whenever the language changes.
    */
   ngOnInit(): void {
-    this.languageService.getCurrentLanguage().subscribe(lang => {
-      this.currentLanguage = lang;
-    });
+    this.languageService.getCurrentLanguage().subscribe(lang => this.currentLanguage = lang);
   }
 
   /**
@@ -47,6 +45,6 @@ export class FooterComponent {
    */
   gotToContact(sectionId: string, contactInput: string) {
     this.router.navigate(['/main-content']);
-    this.scrollService.scrollToSection(sectionId, contactInput);
+    setTimeout(() => this.scrollService.scrollToSection(sectionId, contactInput));
   }
 }

@@ -21,9 +21,7 @@ export class CommentsFromColleaguesComponent {
    * Subscribes to the current language from the LanguageService and updates `currentLanguage`.
    */
   ngOnInit(): void {
-    this.languageService.getCurrentLanguage().subscribe(lang => {
-      this.currentLanguage = lang;
-    });
+    this.languageService.getCurrentLanguage().subscribe(lang => this.currentLanguage = lang);
   }
 
   /**

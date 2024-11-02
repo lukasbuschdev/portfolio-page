@@ -74,6 +74,6 @@ export class PrivacyComponent {
    */
   openContact() {
     this.closePrivacy();
-    setTimeout(() => this.scrollService.scrollToSection('contact-container', 'name'), 100);
+    setTimeout(() => this.scrollService.scrollToSection('contact-container', 'name'));
   }
 }

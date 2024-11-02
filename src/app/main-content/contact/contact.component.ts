@@ -28,9 +28,7 @@ export class ContactComponent {
    * @returns {void}
    */
   ngOnInit(): void {
-    this.languageService.getCurrentLanguage().subscribe(lang => {
-      this.currentLanguage = lang;
-    });
+    this.languageService.getCurrentLanguage().subscribe(lang => this.currentLanguage = lang);
   }
 
   /**

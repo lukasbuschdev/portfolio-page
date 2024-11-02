@@ -17,14 +17,12 @@ export class MenuComponent {
 
   constructor(private router: Router, private themeService: ThemeService, private languageService: LanguageService, public scrollService: ScrollService) { }
 
-    /**
+  /**
    * Initializes the component by subscribing to the current language from the language service
    * and setting the dark mode status based on the current theme settings.
    */
   ngOnInit(): void {
-    this.languageService.getCurrentLanguage().subscribe(lang => {
-      this.currentLanguage = lang;
-    });
+    this.languageService.getCurrentLanguage().subscribe(lang => this.currentLanguage = lang);
     this.checkDarkMode();
   }
 
@@ -61,12 +59,12 @@ export class MenuComponent {
    * Closes the menu and navigates to the main content route.
    * @param {string} sectionId - Section of main-content
    * Scrolls to designated section of main-content.
+   * Set timeout is required due to having to await the JavaScript event cycle.
    */
-  closeMenu(sectionId: string, inputId: string): void {
+  closeMenu(sectionId?: string, inputId?: string): void {
     this.router.navigate(['/main-content']);
-    setTimeout(() => {
-      this.scrollService.scrollToSection(sectionId, inputId);
-    }, 200);   
+    if(!sectionId) return;
+    setTimeout(() => this.scrollService.scrollToSection(sectionId, inputId));
   }
 
   /**

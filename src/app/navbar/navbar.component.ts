@@ -27,9 +27,7 @@ export class NavbarComponent {
    * and setting the dark mode status based on the current theme settings.
    */
   ngOnInit(): void {
-    this.languageService.getCurrentLanguage().subscribe(lang => {
-      this.currentLanguage = lang;
-    });
+    this.languageService.getCurrentLanguage().subscribe(lang => this.currentLanguage = lang);
     this.checkDarkMode();
   }
 
@@ -76,8 +74,8 @@ export class NavbarComponent {
     this.themeService.toggleDarkMode();
   }
 
-  goToSection(sectionId: string, contactContainer: string) {
+  goToSection(sectionId: string, contactContainer?: string) {
     this.router.navigate(['/main-content']);
-    this.scrollService.scrollToSection(sectionId, contactContainer);
+    setTimeout(() => this.scrollService.scrollToSection(sectionId, contactContainer));
   }
 }

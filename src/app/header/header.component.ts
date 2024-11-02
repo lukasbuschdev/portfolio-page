@@ -28,9 +28,7 @@ export class HeaderComponent {
    * and setting the dark mode status based on the current theme settings.
    */
   ngOnInit(): void {
-    this.languageService.getCurrentLanguage().subscribe(lang => {
-      this.currentLanguage = lang;
-    });
+    this.languageService.getCurrentLanguage().subscribe(lang => this.currentLanguage = lang);
     this.checkDarkMode();
   }
 

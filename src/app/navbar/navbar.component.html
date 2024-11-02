@@ -29,9 +29,9 @@
         </div>
       
         <div class="links-container center gap-20">
-            <span (click)="goToSection('description-container', '')">{{ getTranslation('ABOUT_ME') }}</span>
-            <span (click)="goToSection('skillset-container', '')">{{ getTranslation('SKILL_SET') }}</span>
-            <span (click)="goToSection('projects-container', '')">{{ getTranslation('MY_WORK') }}</span>
+            <span (click)="goToSection('description-container')">{{ getTranslation('ABOUT_ME') }}</span>
+            <span (click)="goToSection('skillset-container')">{{ getTranslation('SKILL_SET') }}</span>
+            <span (click)="goToSection('projects-container')">{{ getTranslation('MY_WORK') }}</span>
             <span (click)="goToSection('contact-container', 'name')">{{ getTranslation('CONTACT') }}</span>
             <span (click)="toggleDarkMode()">
                 <ng-container *ngIf="checkDarkMode(); else lightMode">Light</ng-container>

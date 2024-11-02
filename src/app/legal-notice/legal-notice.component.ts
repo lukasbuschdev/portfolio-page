@@ -23,9 +23,7 @@ export class LegalNoticeComponent {
    * Updates the `currentLanguage` property whenever the language changes.
    */
   ngOnInit(): void {
-    this.languageService.getCurrentLanguage().subscribe(lang => {
-      this.currentLanguage = lang;
-    });
+    this.languageService.getCurrentLanguage().subscribe(lang => this.currentLanguage = lang);
   }
 
   /**
