@@ -1,7 +1,7 @@
 @import 'variables';
 
 nav {
-  height: 15vh;
+  height: 12vh;
   width: 100%;
   padding: 2% 5%;
   background: $white;
@@ -14,6 +14,8 @@ nav {
   .nav-container {
     width: 100%;
     max-width: 1440px;
+    align-items: center;
+    height: 100%;
   }
 
   #menu {
@@ -28,8 +30,8 @@ nav {
   }
   
   img:first-of-type {
-    height: 64px;
-    width: 64px;   
+    height: 80px;
+    width: 80px;   
   }
   
   .links-container {
@@ -99,11 +101,6 @@ nav {
     .nav-container {
       align-items: center;
 
-      img:first-of-type {
-        height: 50px;
-        width: 50px;
-      }
-
       .nav-language {
         position: absolute;
         right: 15%;
@@ -120,14 +117,21 @@ nav {
   }
 }
 
-@media(max-width :450px) {
-  .nav-language {
-    position: unset !important;
+@media(max-width: 450px) {
+  nav {
+    img:first-of-type {
+      height: 64px;
+      width: 64px;
+    }
+
+    .nav-language {
+      position: unset !important;
+    }
   }
 }
 
 @media(min-width: 1440px) {
   nav {
-    height: 10vh;
+    height: 12vh;
   }
 }

@@ -1,17 +1,18 @@
 @import 'variables';
 
 header {
-    height: calc(100vh - 15vh);
+    height: calc(100vh - 12vh);
+    min-height: calc(100vh - 12vh);
     max-height: 1000px;
     width: 100%;
-    margin-top: 15vh;
+    margin-top: 12vh;
     position: relative;
     background-color: $white;
     background-image: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
     z-index: 9;
     transition: background-color 200ms ease-in-out;
     align-items: center;
-    scroll-margin-top: 15vh;
+    scroll-margin-top: 12vh;
 
     #limiter {
         height: 100%;
@@ -142,7 +143,7 @@ header {
             width: 100%;
 
             img {
-                height: 55vh;
+                height: 50vh;
             }
         }
 
@@ -192,6 +193,6 @@ header {
 
 @media(min-width: 1440px) {
     header {
-        margin-top: 10vh;
+        margin-top: 12vh;
     }
 }
