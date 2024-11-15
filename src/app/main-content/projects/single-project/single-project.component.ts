@@ -52,7 +52,7 @@ export class SingleProjectComponent {
           description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
           img: './assets/img/polloloco.png',
           link: 'https://lukasbusch.dev/PolloLoco/index.html',
-          github: 'https://github.com/lukasbuschdev/PolloLoco'
+          github: 'https://github.com/lukasbuschdev/ElPolloLoco'
         },
         {
           name: 'Notes',
@@ -78,7 +78,7 @@ export class SingleProjectComponent {
           description: 'Juego de saltar, correr y lanzar basado en un enfoque orientado a objetos. Ayuda a Pepe a encontrar monedas y salsa tabasco para luchar contra la gallina loca.',
           img: './assets/img/polloloco.png',
           link: 'https://lukasbusch.dev/PolloLoco/index.html',
-          github: 'https://github.com/lukasbuschdev/PolloLoco'
+          github: 'https://github.com/lukasbuschdev/ElPolloLoco'
         },
         {
           name: 'Notas',
@@ -104,7 +104,7 @@ export class SingleProjectComponent {
           description: 'Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabascosauce zu finden, um gegen die verrückte Henne zu kämpfen.',
           img: './assets/img/polloloco.png',
           link: 'https://lukasbusch.dev/PolloLoco/index.html',
-          github: 'https://github.com/lukasbuschdev/PolloLoco'
+          github: 'https://github.com/lukasbuschdev/ElPolloLoco'
         },
         {
           name: 'Notizen',
