@@ -32,8 +32,16 @@ export class SkillsetComponent {
       img: './assets/img/scrum.svg'
     },
     {
+      name: 'Supabase',
+      img: './assets/img/supabase.svg'
+    },
+    {
       name: 'Firebase',
       img: './assets/img/firebase.svg'
+    },
+    {
+      name: 'Node',
+      img: './assets/img/node.svg'
     },
     {
       name: 'GIT',

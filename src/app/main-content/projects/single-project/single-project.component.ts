@@ -39,6 +39,14 @@ export class SingleProjectComponent {
     const translations: any = {
       en: [
         {
+          name: 'Expense Tracker',
+          technologies: 'Angular 19 | TypeScript | HTML | SCSS | Supabase | Node | Express',
+          description: 'Expense Tracker is a full-stack application that simplifies financial management. Create an account to unlock a dynamic dashboard with graphical summaries, manage your expenses, budgets, and categories, and adjust your settings all in one intuitive interface.',
+          img: './assets/img/expensetracker.png',
+          link: 'https://expensetracker.lukasbusch.dev',
+          github: 'https://github.com/lukasbuschdev/tracker'
+        },
+        {
           name: 'Join',
           technologies: 'JavaScript | HTML | CSS | Firebase',
           description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
@@ -65,6 +73,14 @@ export class SingleProjectComponent {
       ],
       es: [
         {
+          name: 'Expense Tracker',
+          technologies: 'Angular 19 | TypeScript | HTML | SCSS | Supabase | Node | Express',
+          description: 'Expense Tracker es una aplicación full-stack que simplifica la gestión financiera. Crea una cuenta para acceder a un panel dinámico con resúmenes gráficos, gestiona tus gastos, presupuestos y categorías, y ajusta tu configuración, todo en una interfaz intuitiva.',
+          img: './assets/img/expensetracker.png',
+          link: 'https://expensetracker.lukasbusch.dev',
+          github: 'https://github.com/lukasbuschdev/tracker'
+        },
+        {
           name: 'Join',
           technologies: 'JavaScript | HTML | CSS | Firebase',
           description: 'Administrador de tareas inspirado en el sistema Kanban. Crea y organiza tareas usando funciones de arrastrar y soltar, asignar usuarios y categorías.',
@@ -90,6 +106,14 @@ export class SingleProjectComponent {
         }
       ],
       de: [
+        {
+          name: 'Expense Tracker',
+          technologies: 'Angular 19 | TypeScript | HTML | SCSS | Supabase | Node | Express',
+          description: 'Expense Tracker ist eine Full-Stack-Anwendung, die das Finanzmanagement vereinfacht. Erstelle ein Konto, um ein dynamisches Dashboard mit grafischen Übersichten freizuschalten, verwalte deine Ausgaben, Budgets und Kategorien und passe deine Einstellungen in einer intuitiven Benutzeroberfläche an.',
+          img: './assets/img/expensetracker.png',
+          link: 'https://expensetracker.lukasbusch.dev',
+          github: 'https://github.com/lukasbuschdev/tracker'
+        },
         {
           name: 'Join',
           technologies: 'JavaScript | HTML | CSS | Firebase',

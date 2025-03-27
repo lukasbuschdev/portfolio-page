@@ -17,7 +17,7 @@ export class LanguageService {
       SCROLL: 'Scroll down',
       DESCRIPTION_HEADING: "Let's work together",
       I_AM: 'I am',
-      DESCRIPTION_TEXT_1: `I am a Front-end developer based in Mérida, Mexico. 
+      DESCRIPTION_TEXT_1: `I am a Front-Stack developer based in Merida, Mexico. 
                     I enjoy helping designers and companies bring their ideas into real life.
                     I am looking forward to continuing my developer career with a job in a junior web developer position. 
                     My ability to solve complex problems and my passion for programming make me a valuable member for your team.`,
@@ -73,7 +73,7 @@ export class LanguageService {
       SCROLL: 'Desplázate abajo',
       DESCRIPTION_HEADING: 'Trabajemos juntos',
       I_AM: 'Soy',
-      DESCRIPTION_TEXT_1: `Soy un desarrollador Front-end basado en Mérida, México.
+      DESCRIPTION_TEXT_1: `Soy un desarrollador full-stack basado en Mérida, México.
                     Disfruto ayudar a diseñadores y empresas a convertir sus ideas en realidad.
                     Estoy buscando continuar mi carrera como desarrollador con un trabajo en una posición junior de desarrollador web.
                     Mi capacidad para resolver problemas complejos y mi pasión por la programación me hacen un miembro valioso para tu equipo.`,
@@ -131,7 +131,7 @@ export class LanguageService {
       SCROLL: 'Runterscrollen',
       DESCRIPTION_HEADING: 'Lass uns zusammen arbeiten',
       I_AM: 'Ich bin',
-      DESCRIPTION_TEXT_1: `Ich bin ein Frontend-Entwickler mit Sitz in Mérida, Mexiko.
+      DESCRIPTION_TEXT_1: `Ich bin ein Full-Stack-Entwickler mit Sitz in Mérida, Mexiko.
                     Ich genieße es, Designern und Unternehmen zu helfen, ihre Ideen in die Realität umzusetzen.
                     Ich freue mich darauf, meine Karriere als Entwickler in einer Junior-Webentwickler-Position fortzusetzen.
                     Meine Fähigkeit, komplexe Probleme zu lösen, und meine Leidenschaft für das Programmieren machen mich zu einem wertvollen Mitglied deines Teams.`,
