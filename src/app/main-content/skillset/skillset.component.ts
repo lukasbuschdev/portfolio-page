@@ -52,7 +52,7 @@ export class SkillsetComponent {
       img: './assets/img/css.svg'
     },
     {
-      name: 'Rest-Api',
+      name: 'REST-API',
       img: './assets/img/api.svg'
     },
     {

@@ -17,7 +17,7 @@ export class LanguageService {
       SCROLL: 'Scroll down',
       DESCRIPTION_HEADING: "Let's work together",
       I_AM: 'I am',
-      DESCRIPTION_TEXT_1: `I am a Front-Stack developer based in Merida, Mexico. 
+      DESCRIPTION_TEXT_1: `I am a Full-Stack Developer based in Merida, Mexico. 
                     I enjoy helping designers and companies bring their ideas into real life.
                     I am looking forward to continuing my developer career with a job in a junior web developer position. 
                     My ability to solve complex problems and my passion for programming make me a valuable member for your team.`,
