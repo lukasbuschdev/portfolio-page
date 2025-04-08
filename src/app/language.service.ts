@@ -17,10 +17,10 @@ export class LanguageService {
       SCROLL: 'Scroll down',
       DESCRIPTION_HEADING: "Let's work together",
       I_AM: 'I am',
-      DESCRIPTION_TEXT_1: `I am a Full-Stack Developer based in Merida, Mexico. 
-                    I enjoy helping designers and companies bring their ideas into real life.
-                    I am looking forward to continuing my developer career with a job in a junior web developer position. 
-                    My ability to solve complex problems and my passion for programming make me a valuable member for your team.`,
+      DESCRIPTION_TEXT_1: `As a Full-Stack Developer based in Mérida, Mexico, I enjoy helping designers and companies bring their ideas to life. 
+                Specializing in Angular, TypeScript, SCSS and Node.js, I develop dynamic and responsive web applications. 
+                I am seeking a mid-level web developer position to advance my career. 
+                My ability to solve complex problems and my passion for programming make me a valuable asset to your team.`,
       DESCRIPTION_TEXT_2: "If you think I'd be a good match for your projects, contact me!",
       DESCRIPTION_BUTTON: 'Send a message',
       LOCATION: `located in <br> Merida, Mexico`,
@@ -73,10 +73,10 @@ export class LanguageService {
       SCROLL: 'Desplázate abajo',
       DESCRIPTION_HEADING: 'Trabajemos juntos',
       I_AM: 'Soy',
-      DESCRIPTION_TEXT_1: `Soy un desarrollador full-stack basado en Mérida, México.
-                    Disfruto ayudar a diseñadores y empresas a convertir sus ideas en realidad.
-                    Estoy buscando continuar mi carrera como desarrollador con un trabajo en una posición junior de desarrollador web.
-                    Mi capacidad para resolver problemas complejos y mi pasión por la programación me hacen un miembro valioso para tu equipo.`,
+      DESCRIPTION_TEXT_1: `Como Desarrollador Full-Stack con sede en Mérida, México, disfruto ayudando a diseñadores y empresas a hacer realidad sus ideas. 
+                          Especializado en Angular, TypeScript, SCSS y Node.js, desarrollo aplicaciones web dinámicas y responsivas. 
+                          Estoy buscando un puesto de desarrollador web de nivel intermedio para avanzar en mi carrera. 
+                          Mi capacidad para resolver problemas complejos y mi pasión por la programación me convierten en un valioso activo para su equipo.`,
       DESCRIPTION_TEXT_2: '¡Si crees que encajaría en tus proyectos, contáctame!',
       DESCRIPTION_BUTTON: 'Enviar mensaje',
       LOCATION: `ubicado en <br> Mérida, México`,
@@ -131,10 +131,10 @@ export class LanguageService {
       SCROLL: 'Runterscrollen',
       DESCRIPTION_HEADING: 'Lass uns zusammen arbeiten',
       I_AM: 'Ich bin',
-      DESCRIPTION_TEXT_1: `Ich bin ein Full-Stack-Entwickler mit Sitz in Mérida, Mexiko.
-                    Ich genieße es, Designern und Unternehmen zu helfen, ihre Ideen in die Realität umzusetzen.
-                    Ich freue mich darauf, meine Karriere als Entwickler in einer Junior-Webentwickler-Position fortzusetzen.
-                    Meine Fähigkeit, komplexe Probleme zu lösen, und meine Leidenschaft für das Programmieren machen mich zu einem wertvollen Mitglied deines Teams.`,
+      DESCRIPTION_TEXT_1: `Als Full-Stack-Entwickler mit Sitz in Mérida, Mexiko, unterstütze ich gerne Designer und Unternehmen dabei, ihre Ideen in die Realität umzusetzen. 
+                          Mit Spezialisierung auf Angular, TypeScript, SCSS und Node.js entwickle ich dynamische und responsive Webanwendungen. 
+                          Ich suche eine Position als Webentwickler auf mittlerer Ebene, um meine Karriere voranzutreiben. 
+                          Meine Fähigkeit, komplexe Probleme zu lösen, und meine Leidenschaft für Programmierung machen mich zu einer wertvollen Bereicherung für Ihr Team.`,
       DESCRIPTION_TEXT_2: 'Wenn du denkst, dass ich gut zu deinen Projekten passen würde, kontaktiere mich!',
       DESCRIPTION_BUTTON: 'Nachricht senden',
       LOCATION: `standort in <br> Merida, Mexiko`,
